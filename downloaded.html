@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pintofil | Materiales de Impresión 3D de Ingeniería</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e2e2e2",
+                    "tertiary-container": "#5895ff",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-surface": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "on-primary-container": "#561d00",
+                    "tertiary-fixed-dim": "#adc7ff",
+                    "on-secondary-container": "#656464",
+                    "background": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "on-surface-variant": "#5a4136",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-fixed-variant": "#004493",
+                    "tertiary": "#005bc0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#d8e2ff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary": "#a33e00",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary": "#5f5e5e",
+                    "inverse-surface": "#2f3131",
+                    "outline-variant": "#e3bfb1",
+                    "on-tertiary-fixed": "#001a41",
+                    "on-secondary-fixed-variant": "#474747",
+                    "primary-container": "#ff6600",
+                    "surface-container": "#eeeeee",
+                    "on-background": "#1a1c1c",
+                    "primary-fixed-dim": "#ffb596",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "inverse-primary": "#ffb596",
+                    "secondary-container": "#e4e2e1",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed": "#360f00",
+                    "outline": "#8e7164",
+                    "primary-fixed": "#ffdbcd",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-container": "#002d66",
+                    "surface-tint": "#a33e00",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c8c6c6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "stack-sm": "4px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-tech": ["JetBrains Mono"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-tech": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(249,249,249,1) 40%, rgba(249,249,249,0) 100%);
+        }
+        .bento-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 24px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2" href="#">
+<span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                    Pintofil
+                </a>
+<div class="hidden md:flex items-center gap-8 ml-8">
+<a class="text-primary font-bold border-b-2 border-primary hover:text-primary transition-colors duration-200 py-1" href="#">Productos</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200" href="#">Materiales</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200" href="#">Guías</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200" href="#">Soporte</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Buscar Materiales..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+</button>
+<button class="text-secondary hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-right" data-alt="A high-resolution, ultra-detailed professional studio photograph of industrial 3D printed mechanical gears made from gray PLA filament, interlocking with a vibrant orange spool of filament in the foreground. The lighting is crisp and laboratory-clean, featuring soft shadows and a high-key white background. The aesthetic is modern, technical, and precision-oriented, emphasizing the smooth surface finish of the 3D printed parts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ACgvpO5rO1POXHT_Zr2bhyq85J7OPVss3Fx1F-i68Tv1EWzf2xnXTFWtJb9gMVBYKgYSY0UzGD8wMENtN2OqahKBoI-a36_pHVwIOAhxmhwibOPbwjAScIYxxXmmBapVYYh0AdPL9LA6Oj-KAB_cAfSphv_zJOSEa4LZCCK2yBMIxUB3sTRfCVHOzVilMiROtO4Sgne9M4e2H7yYqRH5KXsVF8LfX8NAH5GYRUnwuOpQ-BsclyXuy3BnwWhjyUOigiGGtwtr7eCO"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-xl animate-fade-in">
+<span class="inline-block px-3 py-1 bg-primary-container/10 text-primary font-label-tech text-label-tech uppercase tracking-widest mb-6">Materiales Certificados ISO 9001</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6">
+                        El Estándar de la <br/><span class="text-primary-container">Impresión 3D</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-md">
+                        Filamentos diseñados para precisión y rendimiento. Con la confianza de laboratorios y diseñadores industriales de todo el mundo para una exactitud dimensional.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary-container text-white font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary-container/20">
+                            Comprar Ahora
+                        </button>
+<button class="px-8 py-4 bg-transparent border border-secondary text-secondary font-bold rounded-lg hover:bg-secondary/5 active:scale-95 transition-all">
+                            Fichas Técnicas
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Bento Grid -->
+<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Ecosistema de Materiales</h2>
+<p class="text-secondary max-w-lg">Selecciona la química adecuada para tu aplicación, desde prototipado rápido hasta piezas finales funcionales.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 group" href="#">
+                    Ver todos los materiales 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- PLA -->
+<div class="bento-card bg-white border border-outline-variant p-8 flex flex-col items-start h-full">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">PLA</h3>
+<p class="text-secondary font-body-md mb-8 flex-grow">Ácido poliláctico de grado industrial. Ideal para principiantes y prototipado general con alto detalle.</p>
+<div class="flex items-center gap-2 mb-6 font-label-tech text-label-tech text-secondary">
+<span class="px-2 py-1 bg-surface-container rounded">1.75mm</span>
+<span class="px-2 py-1 bg-surface-container rounded">2.85mm</span>
+</div>
+<button class="w-full py-3 bg-primary-container text-white font-bold rounded hover:brightness-110 transition-all">Explorar PLA</button>
+</div>
+<!-- PETG -->
+<div class="bento-card bg-white border border-outline-variant p-8 flex flex-col items-start h-full">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl text-tertiary" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">PETG</h3>
+<p class="text-secondary font-body-md mb-8 flex-grow">Resistencia química mejorada y tenacidad mecánica para componentes funcionales.</p>
+<div class="flex items-center gap-2 mb-6 font-label-tech text-label-tech text-secondary">
+<span class="px-2 py-1 bg-surface-container rounded">Resistente UV</span>
+</div>
+<button class="w-full py-3 bg-primary-container text-white font-bold rounded hover:brightness-110 transition-all">Explorar PETG</button>
+</div>
+<!-- Special Resins -->
+<div class="bento-card bg-white border border-outline-variant p-8 flex flex-col items-start h-full">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">science</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Resinas Especiales</h3>
+<p class="text-secondary font-body-md mb-8 flex-grow">Fotopolímeros de alta resolución para impresión SLA/DLP. Rendimiento de grado de ingeniería.</p>
+<div class="flex items-center gap-2 mb-6 font-label-tech text-label-tech text-secondary">
+<span class="px-2 py-1 bg-surface-container rounded">Biocompatible</span>
+</div>
+<button class="w-full py-3 bg-primary-container text-white font-bold rounded hover:brightness-110 transition-all">Explorar Resinas</button>
+</div>
+<!-- Accessories -->
+<div class="bento-card bg-white border border-outline-variant p-8 flex flex-col items-start h-full">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 1;">settings_input_component</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Accesorios</h3>
+<p class="text-secondary font-body-md mb-8 flex-grow">Boquillas de precisión, camas calientes y kits de mantenimiento para el máximo tiempo de actividad.</p>
+<div class="flex items-center gap-2 mb-6 font-label-tech text-label-tech text-secondary">
+<span class="px-2 py-1 bg-surface-container rounded">Todas las Marcas</span>
+</div>
+<button class="w-full py-3 bg-primary-container text-white font-bold rounded hover:brightness-110 transition-all">Explorar Accesorios</button>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="bg-surface-container py-24 mb-stack-lg">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Precisión Directa a tu Bandeja de Entrada</h2>
+<p class="text-secondary max-w-2xl mx-auto mb-10">Suscríbete para recibir lanzamientos de materiales técnicos, guías de optimización de impresoras y perspectivas exclusivas de proyectos Pintofil.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+<input class="flex-grow px-6 py-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="profesional@email.com" type="email"/>
+<button class="px-10 py-4 bg-inverse-surface text-white font-bold rounded-lg hover:bg-on-surface transition-all">Suscribirse</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-secondary dark:bg-inverse-surface py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand & Contact -->
+<div class="flex flex-col gap-6">
+<a class="font-headline-md text-headline-md font-black text-white flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                    Pintofil
+                </a>
+<p class="text-white opacity-60 font-body-md leading-relaxed">
+                    © 2024 Pintofil Advanced Materials. <br/>Diseñados para Precisión. Fabricación certificada ISO para confiabilidad industrial.
+                </p>
+<div class="flex gap-4 mt-2">
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<!-- Material Guides -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Guías de Materiales</h4>
+<div class="flex flex-col gap-3">
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="#">Ajustes de PLA</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="#">Datos Químicos PETG</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="#">Fichas de Seguridad de Resina</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="#">Guía de Almacenamiento</a>
+</div>
+</div>
+<!-- Technical Support -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Soporte Técnico</h4>
+<div class="flex flex-col gap-3">
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="#">Política de Envío</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="#">Política de Privacidad</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="#">Política de Reembolso</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="#">Consulta de Venta al por Mayor</a>
+</div>
+</div>
+<!-- Engineering Resources -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Recursos</h4>
+<div class="flex flex-col gap-4">
+<div class="p-4 bg-white/5 rounded border border-white/10">
+<span class="text-white opacity-60 text-xs block mb-1">Soporte Técnico Directo</span>
+<p class="text-white font-bold">+1 (800) PRINT-3D</p>
+</div>
+<div class="p-4 bg-white/5 rounded border border-white/10">
+<span class="text-white opacity-60 text-xs block mb-1">Sede Central</span>
+<p class="text-white font-bold">Laboratorio R&amp;D, Berlín</p>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 mt-16 pt-8">
+<div class="px-margin-desktop max-w-container-max mx-auto flex justify-between items-center text-white opacity-40 text-sm">
+<span>Polímeros Certificados de Alto Rendimiento</span>
+<div class="flex gap-6">
+<a class="hover:underline" href="#">Términos de Servicio</a>
+<a class="hover:underline" href="#">Cumplimiento de Seguridad</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.98)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = '';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = '';
+            });
+        });
+
+        // Simple scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.add('h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.remove('h-16');
+                header.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>

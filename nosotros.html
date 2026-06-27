@@ -1,0 +1,286 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Filamentos 3D de ingeniería de alta precisión | Pintofil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;900&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Theme Configuration Verbatim -->
+<script src="js/tailwind-config.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .precision-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #e0e0e0 1px, transparent 1px), linear-gradient(to bottom, #e0e0e0 1px, transparent 1px);
+        }
+        .hero-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2" href="index.html">
+<span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                    Pintofil
+                </a>
+<div class="hidden md:flex items-center gap-8 ml-8 h-20">
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="index.html">Inicio</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="catalogo.html">Catálogo</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-primary border-primary" href="nosotros.html">Nosotros</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="contacto.html">Contacto</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<form action="catalogo.html" method="GET" class="hidden lg:flex items-center bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary mr-2">search</span>
+<input name="q" class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Buscar..." type="search" required/>
+<button type="submit" class="hidden"></button>
+</form>
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+</button>
+<button class="text-secondary hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section: Identity & Impact -->
+<section class="relative h-[60vh] flex items-center overflow-hidden bg-on-surface">
+<div class="absolute inset-0 opacity-40">
+<div class="w-full h-full transition-all duration-700 opacity-100 translate-y-0" data-alt="High-resolution close-up of a modern industrial laboratory focusing on precision 3D filament extrusion machinery. The scene features bright laboratory lighting, clinical Blanco surfaces, and sharp metallic equipment. Vivid orange accents from the Pintofil brand identity are visible in the machine's indicators and safety markers, creating a professional, high-end technical atmosphere." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBzrqNtn3c56mbsC895MeR7Bz3UqYUt1HR_Sc_pAH6VjBQBHw2Wsqu3iQPGBYwjSsbYWLc6NMvn3-NO8aTCGiPSwz4XLqYXPuY6wNC_Gy9hjh1secaeyxzKICmNBzwRcxIlSRvYTmZaN0Ng_A92oMDVf-PgcaOyCc9nXD5XFSvTpUUiM4uDPoLYB8NDPs3e3kZH66AFnPVV60X0Zoq1H5EdkkdG_1GjpzrXperjxavosECcI8S0J8lqjYXNLjw4qDuwd88J0Jal_K3_&quot;);"></div>
+</div>
+<div class="relative px-margin-desktop max-w-container-max mx-auto w-full z-10">
+<div class="max-w-2xl transition-all duration-700 opacity-100 translate-y-0">
+<span class="font-label-tech text-label-tech text-white bg-primary px-4 py-1.5 rounded-full mb-stack-md inline-block shadow-lg border border-white/20">ESTABLECIDO EN 2012</span>
+<h1 class="font-display-lg text-display-lg text-white mb-stack-md">Ingeniería en cada capa.</h1>
+<p class="font-body-lg text-body-lg text-white/80 leading-relaxed">
+                        En Pintofil, transformamos polímeros industriales en herramientas de innovación. Diseñamos materiales para los desafíos de ingeniería más exigentes del mundo.
+                    </p>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 w-1/3 h-full bg-primary/10 backdrop-blur-sm transform skew-x-12 translate-x-20"></div>
+</section>
+<!-- Mission & Vision: Bento Layout -->
+<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Mission Statement -->
+<div class="md:col-span-7 bg-white border border-outline-variant p-10 flex flex-col justify-center transition-all duration-700 opacity-100 translate-y-0">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Misión: Ingeniería de Precisión</h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-stack-lg">
+                        Nuestra misión es eliminar la incertidumbre en la fabricación aditiva. No solo vendemos filamento; proporcionamos la consistencia dimensional y las propiedades mecánicas que permiten a los ingenieros confiar en sus prototipos funcionales y piezas finales. Cada lote de material se somete a pruebas rigurosas de tracción, impacto y estabilidad térmica.
+                    </p>
+<div class="flex gap-stack-lg">
+<div class="text-center p-4 border border-surface-container-high rounded-lg flex-1">
+<span class="block font-headline-md text-headline-md text-primary">±0.02mm</span>
+<span class="font-label-tech text-label-tech text-secondary">Tolerancia de Diámetro</span>
+</div>
+<div class="text-center p-4 border border-surface-container-high rounded-lg flex-1">
+<span class="block font-headline-md text-headline-md text-primary">100%</span>
+<span class="font-label-tech text-label-tech text-secondary">Traza Industrial</span>
+</div>
+</div>
+</div>
+<!-- Quality Visual -->
+<div class="md:col-span-5 relative group overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
+<div class="h-full w-full min-h-[400px]" data-alt="A macro photograph of an orange PETG filament spool being inspected by an automated laser micrometer in a cleanroom setting. The lighting is cold and clinical, emphasizing the smooth surface of the material. Deep shadows and sharp highlights highlight the technical perfection of the winding and the vibrant brand color of the filament." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC_LWpQ5FyvxIUlppEpqzee0U91PwolGtlnNTKlltKRMIiweWGJ3ZxHyGynEN__JT1zsVPpeuof0pjYsGlkqTR6gtbLTQbOAQWfysMV_JHPwzZpVI_mVfI9kC9ESrtsLBF_NMPXKQX8h_qBjpWM1L5KJm38BK-nbEgfRbxrEysdcd18fpRmiiQV-Awg-wJAT3eVvQn38buZcPbVPOef6H2b0e-Q9RP1ernBGJKUVCgf-wxtzc9otURzmN57MKV07UFRYMX8whM4fj2i&quot;);"></div>
+<div class="absolute inset-0 bg-on-surface/20 group-hover:bg-on-surface/0 transition-colors duration-500"></div>
+</div>
+<!-- History Row -->
+<div class="md:col-span-4 bg-surface-container-low p-8 border border-outline-variant transition-all duration-700 opacity-100 translate-y-0">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md" data-icon="history">history</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Nuestra Historia</h3>
+<p class="font-body-md text-body-md text-secondary">Nacimos en un laboratorio de prototipado rápido en 2012, frustrados por la inconsistencia de los materiales comerciales de la época.</p>
+</div>
+<div class="md:col-span-8 bg-on-surface text-white p-8 border border-outline-variant flex items-center gap-gutter relative overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
+<div class="flex-1 relative z-10">
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Evolución Tecnológica</h3>
+<p class="text-white/70">Desde el primer spool de PLA hasta nuestras líneas de materiales compuestos con fibra de carbono, Pintofil ha liderado la estandarización de materiales de grado industrial para escritorio.</p>
+</div>
+<div class="hidden lg:block w-48 h-48 bg-primary opacity-20 rounded-full blur-3xl absolute -right-10 -bottom-10"></div>
+<span class="material-symbols-outlined text-primary text-8xl opacity-10 absolute -right-4 -top-4 select-none" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+</div>
+</section>
+<!-- Core Values Section -->
+<section class="bg-surface-container py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 transition-all duration-700 opacity-100 translate-y-0">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Valores de Fabricación</h2>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter transition-all duration-700 opacity-100 translate-y-0">
+<!-- Value 1 -->
+<div class="bg-white p-8 border border-outline-variant transition-all hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] group">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-stack-lg group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="biotech">biotech</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Calidad Técnica</h4>
+<p class="font-body-md text-body-md text-secondary">Controlamos la reología de cada polímero para asegurar una fluidez perfecta y una adhesión entre capas superior.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-white p-8 border border-outline-variant transition-all hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] group">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-stack-lg group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="lightbulb">lightbulb</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Innovación Constante</h4>
+<p class="font-body-md text-body-md text-secondary">Invertimos el 15% de nuestros ingresos anuales en I+D para desarrollar filamentos con mayor resistencia térmica.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-white p-8 border border-outline-variant transition-all hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] group">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-stack-lg group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="verified">verified</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Fiabilidad Industrial</h4>
+<p class="font-body-md text-body-md text-secondary">Nuestros materiales están certificados para aplicaciones aeroespaciales y médicas bajo estándares internacionales.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- QC Process Highlight -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative transition-all duration-700 opacity-100 translate-y-0">
+<div class="aspect-square w-full" data-alt="A series of technical spools of 3D printing filament in metallic silver and deep Negro colors arranged on a Blanco laboratory shelf. The composition is geometric and orderly, showing the precision winding and premium packaging of the Pintofil products. The lighting is soft and diffused, creating a professional, corporate light-mode atmosphere." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA5q6H-JlIL5gqgPDHmzQ4tTEZ_FwSulPlds9s3Zj_G0POes1yMVzS5RDy_UaZPJbN4NHaV7aJekEgs1DtJmhJoCA6q0DB_UxsPYqUgX8QDHoNNzMf8rTCsMRTXq38bPm-_E1xD5gUbU-g7v-ps6kW5Hg7EWgxusfqQq_A6kI-rcjqjjXjSgrQxAgY9JagdLzJS92UQiuRzRcvEXZ1RxKQUHX2G1Fg6YK_yKK3pBjB4TypBr31RdwlKKz3AWHD8KUxBVEYE9cdMXvMM&quot;);"></div>
+<div class="absolute -bottom-8 -right-8 bg-primary-container p-8 text-white max-w-[240px] hidden sm:block">
+<span class="font-label-tech text-label-tech uppercase tracking-widest block mb-2 opacity-80">Pruebas de Lote</span>
+<p class="font-headline-md text-headline-md font-bold">Cada spool cuenta con su propio ID único.</p>
+</div>
+</div>
+<div class="transition-all duration-700 opacity-100 translate-y-0">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-lg">Control de Calidad en Tiempo Real</h2>
+<ul class="space-y-stack-lg">
+<li class="flex gap-stack-md">
+<span class="material-symbols-outlined text-primary shrink-0" data-icon="check_circle">check_circle</span>
+<div>
+<h5 class="font-headline-md text-headline-md text-base mb-1">Medición Láser Dual</h5>
+<p class="text-secondary">Monitoreo 360° del diámetro durante la extrusión con corrección automática instantánea.</p>
+</div>
+</li>
+<li class="flex gap-stack-md">
+<span class="material-symbols-outlined text-primary shrink-0" data-icon="check_circle">check_circle</span>
+<div>
+<h5 class="font-headline-md text-headline-md text-base mb-1">Secado por Deshumidificación Activa</h5>
+<p class="text-secondary">Envasado al vacío inmediato tras la extrusión para garantizar menos de 0.05% de humedad.</p>
+</div>
+</li>
+<li class="flex gap-stack-md">
+<span class="material-symbols-outlined text-primary shrink-0" data-icon="check_circle">check_circle</span>
+<div>
+<h5 class="font-headline-md text-headline-md text-base mb-1">Test de Bobinado Anti-Nudos</h5>
+<p class="text-secondary">Sistema de bobinado de precisión que garantiza una alimentación fluida sin atascos mecánicos.</p>
+</div>
+</li>
+</ul>
+<button class="mt-12 bg-primary-container text-white px-8 py-4 font-bold hover:bg-on-primary-container transition-all flex items-center gap-stack-md active:scale-95">
+                        Ver Catálogo de Materiales
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Newsletter / Contacto CTA -->
+<section class="bg-on-surface py-20 px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter border border-white/10 p-12">
+<div class="text-center md:text-left transition-all duration-700 opacity-100 translate-y-0">
+<h3 class="font-headline-lg text-headline-lg text-white mb-stack-sm">¿Necesitas una solución técnica?</h3>
+<p class="text-white/60">Nuestros ingenieros de materiales están listos para asesorarte en tu próximo proyecto.</p>
+</div>
+<div class="flex gap-stack-md w-full md:w-auto transition-all duration-700 opacity-100 translate-y-0">
+<button class="flex-1 md:flex-none border border-white text-white px-8 py-3 font-medium hover:bg-white hover:text-on-surface transition-all">Consultoría Técnica</button>
+<button class="flex-1 md:flex-none bg-primary-container text-on-primary-container px-8 py-3 font-bold hover:bg-primary-container/90 transition-all">Contáctanos</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-secondary dark:bg-inverse-surface py-stack-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand & Contacto -->
+<div class="flex flex-col gap-6 col-span-2 md:col-span-1">
+<a class="font-headline-md text-headline-md font-black text-white flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">precision_manufacturing</span>
+                    Pintofil
+                </a>
+<p class="text-white opacity-60 font-body-md leading-relaxed">
+                    © 2024 Pintofil Advanced Materials. <br/>Diseñados para Precisión. Fabricación certificada ISO para confiabilidad industrial.
+                </p>
+<div class="flex gap-4 mt-2">
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="https://pintofil.pe" aria-label="Website"><span class="material-symbols-outlined" aria-hidden="true">language</span></a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="mailto:tech@pintofil.pe" aria-label="Email"><span class="material-symbols-outlined" aria-hidden="true">alternate_email</span></a>
+</div>
+</div>
+<!-- Guías de Materiales -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Guías de Materiales</h4>
+<div class="flex flex-col gap-3">
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Ajustes de PLA</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Datos Químicos PETG</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Fichas de Seguridad de Resina</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Guía de Almacenamiento</a>
+</div>
+</div>
+<!-- Soporte Técnico -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Soporte Técnico</h4>
+<div class="flex flex-col gap-3">
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Envío</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Privacidad</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Reembolso</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="contacto.html">Consulta de Venta al por Mayor</a>
+</div>
+</div>
+<!-- Engineering Resources -->
+<div class="flex flex-col gap-4 col-span-2 md:col-span-1">
+<h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Recursos</h4>
+<div class="flex flex-col gap-4">
+<div class="p-4 bg-white/5 rounded border border-white/10">
+<span class="text-white opacity-60 text-xs block mb-1">Soporte Técnico Directo</span>
+<a href="tel:+51014219999" class="text-white font-bold hover:text-primary-container transition-colors">+51 (01) 421 9999</a>
+</div>
+<div class="p-4 bg-white/5 rounded border border-white/10">
+<span class="text-white opacity-60 text-xs block mb-1">Sede Central</span>
+<p class="text-white font-bold">Laboratorio R&amp;D, San Isidro</p>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 mt-16 pt-8">
+<div class="px-margin-desktop max-w-container-max mx-auto flex justify-between items-center text-white opacity-40 text-sm flex-col md:flex-row gap-4">
+<span>Polímeros Certificados de Alto Rendimiento</span>
+<div class="flex gap-6">
+<a class="hover:underline" href="nosotros.html">Términos de Servicio</a>
+<a class="hover:underline" href="nosotros.html">Cumplimiento de Seguridad</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section > div > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>

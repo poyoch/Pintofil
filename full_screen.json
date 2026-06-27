@@ -1,0 +1,279 @@
+﻿{
+    "screenshot":  {
+                       "name":  "projects/11987397552271954312/files/986b376601454d33b493c37d64267326",
+                       "downloadUrl":  "https://lh3.googleusercontent.com/aida/AP1WRLtc9zl6BKrlqgSy1VqXOZzHf9tuib3wnqQei0REUYORXoGRTl3GfUwxv4MGDgge4suMb-MMoCiXdwq7whzFWqN_hvAsHPHYwjNjnlKf2M8s5bMS3x1L3_bwKsM1leZHM47ytx8ZSnMRmmSgOQc5URsojCjhJo23GfrHQx0zr_HZwQALAvtMb2ZjHOem9YnM_fuRHDXnj2IjsSyWby0Ac2mnkh5QKzJdxEjBFs0iPYZefXzGR2yeHjnrIgk"
+                   },
+    "htmlCode":  {
+                     "name":  "projects/11987397552271954312/files/d5eb82a2311442e1a2bbcd0da7a1dbe1",
+                     "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI5OTE1NGFlZThhNzRiMDViZTdlODk4ZDA5YzdjMmIzEgsSBxDW5vzM9QcYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTk4NzM5NzU1MjI3MTk1NDMxMg\u0026filename=\u0026opi=89354086",
+                     "mimeType":  "text/html"
+                 },
+    "id":  "d418e0ea81fa48f4985fcbc9764d3c7f",
+    "generatedBy":  "HatterAgent",
+    "width":  "2560",
+    "height":  "4578",
+    "title":  "Pintofil - Home (Español)",
+    "prompt":  "Translate all content on this screen to Spanish. \n- Navigation: \u0027Products\u0027 -\u003e \u0027Productos\u0027, \u0027Materials\u0027 -\u003e \u0027Materiales\u0027, \u0027Guides\u0027 -\u003e \u0027Guías\u0027, \u0027Support\u0027 -\u003e \u0027Soporte\u0027.\n- Hero: \u0027The Standard of 3D Printing\u0027 -\u003e \u0027El Estándar de la Impresión 3D\u0027, \u0027Engineered Filaments...\u0027 -\u003e \u0027Filamentos diseñados para precisión y rendimiento. Con la confianza de laboratorios y diseñadores industriales de todo el mundo para una exactitud dimensional.\u0027, \u0027Shop Now\u0027 -\u003e \u0027Comprar Ahora\u0027, \u0027Technical Data Sheets\u0027 -\u003e \u0027Fichas Técnicas\u0027.\n- Material Ecosystem: \u0027Material Ecosystem\u0027 -\u003e \u0027Ecosistema de Materiales\u0027, \u0027Select the right chemistry...\u0027 -\u003e \u0027Selecciona la química adecuada para tu aplicación, desde prototipado rápido hasta piezas finales funcionales.\u0027, \u0027View all materials\u0027 -\u003e \u0027Ver todos los materiales\u0027.\n- Categories: \u0027Explore PLA\u0027 -\u003e \u0027Explorar PLA\u0027, \u0027Explore PETG\u0027 -\u003e \u0027Explorar PETG\u0027, \u0027Explore Resins\u0027 -\u003e \u0027Explorar Resinas\u0027, \u0027Explore Accessories\u0027 -\u003e \u0027Explorar Accesorios\u0027.\n- Newsletter: \u0027Precision Delivered to Your Inbox\u0027 -\u003e \u0027Precisión Directa a tu Bandeja de Entrada\u0027, \u0027Subscribe for technical...\u0027 -\u003e \u0027Suscríbete para recibir lanzamientos de materiales técnicos, guías de optimización de impresoras y perspectivas exclusivas de proyectos Pintofil.\u0027, \u0027Subscribe\u0027 -\u003e \u0027Suscribirse\u0027.\n- Footer: \u0027Material Guides\u0027 -\u003e \u0027Guías de Materiales\u0027, \u0027Technical Support\u0027 -\u003e \u0027Soporte Técnico\u0027, \u0027Resources\u0027 -\u003e \u0027Recursos\u0027, \u0027Direct Technical Support\u0027 -\u003e \u0027Soporte Técnico Directo\u0027, \u0027HQ Location\u0027 -\u003e \u0027Sede Central\u0027.\nMaintain all branding, colors (orange #ff6600), and assets.",
+    "name":  "projects/11987397552271954312/screens/d418e0ea81fa48f4985fcbc9764d3c7f",
+    "theme":  {
+                  "colorMode":  "LIGHT",
+                  "font":  "HANKEN_GROTESK",
+                  "roundness":  "ROUND_FOUR",
+                  "customColor":  "#ff6600",
+                  "headlineFont":  "HANKEN_GROTESK",
+                  "bodyFont":  "INTER",
+                  "labelFont":  "JETBRAINS_MONO",
+                  "namedColors":  {
+                                      "outline":  "#8e7164",
+                                      "secondary_fixed":  "#e4e2e1",
+                                      "surface_container_lowest":  "#ffffff",
+                                      "surface":  "#f9f9f9",
+                                      "surface_container_high":  "#e8e8e8",
+                                      "primary_container":  "#ff6600",
+                                      "on_primary_fixed":  "#360f00",
+                                      "on_secondary":  "#ffffff",
+                                      "primary_fixed_dim":  "#ffb596",
+                                      "on_primary_container":  "#561d00",
+                                      "error":  "#ba1a1a",
+                                      "on_background":  "#1a1c1c",
+                                      "inverse_on_surface":  "#f1f1f1",
+                                      "on_surface":  "#1a1c1c",
+                                      "error_container":  "#ffdad6",
+                                      "on_tertiary_fixed":  "#001a41",
+                                      "on_error":  "#ffffff",
+                                      "surface_dim":  "#dadada",
+                                      "on_surface_variant":  "#5a4136",
+                                      "surface_tint":  "#a33e00",
+                                      "background":  "#f9f9f9",
+                                      "on_error_container":  "#93000a",
+                                      "surface_variant":  "#e2e2e2",
+                                      "on_secondary_fixed":  "#1b1c1c",
+                                      "secondary_fixed_dim":  "#c8c6c6",
+                                      "tertiary":  "#005bc0",
+                                      "inverse_surface":  "#2f3131",
+                                      "primary":  "#a33e00",
+                                      "secondary_container":  "#e4e2e1",
+                                      "tertiary_fixed_dim":  "#adc7ff",
+                                      "outline_variant":  "#e3bfb1",
+                                      "on_tertiary_container":  "#002d66",
+                                      "on_secondary_fixed_variant":  "#474747",
+                                      "on_primary":  "#ffffff",
+                                      "primary_fixed":  "#ffdbcd",
+                                      "inverse_primary":  "#ffb596",
+                                      "on_tertiary":  "#ffffff",
+                                      "on_tertiary_fixed_variant":  "#004493",
+                                      "surface_container":  "#eeeeee",
+                                      "surface_container_low":  "#f3f3f3",
+                                      "tertiary_fixed":  "#d8e2ff",
+                                      "on_secondary_container":  "#656464",
+                                      "secondary":  "#5f5e5e",
+                                      "surface_container_highest":  "#e2e2e2",
+                                      "surface_bright":  "#f9f9f9",
+                                      "on_primary_fixed_variant":  "#7c2e00",
+                                      "tertiary_container":  "#5895ff"
+                                  },
+                  "colorVariant":  "FIDELITY",
+                  "overridePrimaryColor":  "#ff6600",
+                  "overrideSecondaryColor":  "#333333",
+                  "overrideTertiaryColor":  "#007bff",
+                  "overrideNeutralColor":  "#f5f5f5",
+                  "spacingScale":  2,
+                  "typography":  {
+                                     "label-tech":  {
+                                                        "fontFamily":  "JetBrains Mono",
+                                                        "fontSize":  "13px",
+                                                        "fontWeight":  "500",
+                                                        "lineHeight":  "1.2",
+                                                        "letterSpacing":  "0.05em"
+                                                    },
+                                     "headline-lg":  {
+                                                         "fontFamily":  "Hanken Grotesk",
+                                                         "fontSize":  "32px",
+                                                         "fontWeight":  "600",
+                                                         "lineHeight":  "1.2"
+                                                     },
+                                     "headline-md":  {
+                                                         "fontFamily":  "Hanken Grotesk",
+                                                         "fontSize":  "24px",
+                                                         "fontWeight":  "600",
+                                                         "lineHeight":  "1.3"
+                                                     },
+                                     "display-lg":  {
+                                                        "fontFamily":  "Hanken Grotesk",
+                                                        "fontSize":  "48px",
+                                                        "fontWeight":  "700",
+                                                        "lineHeight":  "1.1",
+                                                        "letterSpacing":  "-0.02em"
+                                                    },
+                                     "headline-lg-mobile":  {
+                                                                "fontFamily":  "Hanken Grotesk",
+                                                                "fontSize":  "28px",
+                                                                "fontWeight":  "600",
+                                                                "lineHeight":  "1.2"
+                                                            },
+                                     "body-md":  {
+                                                     "fontFamily":  "Inter",
+                                                     "fontSize":  "16px",
+                                                     "fontWeight":  "400",
+                                                     "lineHeight":  "1.5"
+                                                 },
+                                     "body-lg":  {
+                                                     "fontFamily":  "Inter",
+                                                     "fontSize":  "18px",
+                                                     "fontWeight":  "400",
+                                                     "lineHeight":  "1.6"
+                                                 }
+                                 },
+                  "spacing":  {
+                                  "container-max":  "1280px",
+                                  "base":  "8px",
+                                  "margin-desktop":  "40px",
+                                  "stack-md":  "16px",
+                                  "stack-sm":  "4px",
+                                  "margin-mobile":  "16px",
+                                  "stack-lg":  "32px",
+                                  "gutter":  "24px"
+                              },
+                  "headlineFontFamily":  "Hanken Grotesk",
+                  "bodyFontFamily":  "Inter",
+                  "labelFontFamily":  "Jetbrains Mono"
+              },
+    "deviceType":  "DESKTOP",
+    "screenType":  "DESIGN",
+    "screenMetadata":  {
+                           "agentType":  "PRO_AGENT",
+                           "status":  "COMPLETE"
+                       },
+    "designSystem":  {
+                         "name":  "assets/118ec5af766e4e789c928bce502286e1",
+                         "designSystem":  {
+                                              "displayName":  "Pintofil",
+                                              "styleGuidelines":  "## Brand \u0026 Style\nThe design system for this high-end 3D printing filament store is built upon a **Corporate Modern** aesthetic with a **Technical** edge. It targets engineering professionals, rapid prototyping labs, and industrial designers who demand precision and reliability. \n\nThe visual narrative focuses on \"Engineered Performance.\" This is achieved through a structural layout, high-contrast action elements, and a clean, laboratory-like atmosphere. The interface should feel as precise as the 3D printers its customers operate—utilizing clear hierarchies, generous whitespace, and sharp functional accents to evoke a sense of premium quality and technical expertise.\n\n## Layout \u0026 Spacing\nThis design system utilizes a **12-column fluid grid** with a maximum container width of 1280px. \n\nThe spacing rhythm is strictly based on an **8px base unit**. \n- **Desktop:** 24px gutters with 40px outer margins. Sidebar filters occupy 3 columns (or a fixed 280px width) while the product grid occupies the remaining 9 columns.\n- **Mobile:** The layout collapses to a single column with 16px margins.\n- **Technical density:** For filter panels and spec tables, the vertical spacing is reduced to 4px (stack-sm) to allow for high data density without excessive scrolling.\n\n## Elevation \u0026 Depth\nDepth is communicated through **Low-contrast Outlines** and **Tonal Layers** rather than heavy shadows, maintaining a \"precision instrument\" feel.\n\n- **Level 0 (Base):** Light Gray (#F5F5F5) for the canvas.\n- **Level 1 (Cards/Containers):** Pure White (#FFFFFF) with a 1px solid border (#E0E0E0).\n- **Interactive State:** When hovered, elements receive a soft, ultra-diffused shadow (0px 8px 24px rgba(0,0,0,0.06)) to indicate lift without feeling \"floaty.\"\n- **Overlays:** Modals and tooltips use a slightly thicker border and a background blur (12px) if positioned over busy technical charts.\n\n## Components\n\n- **Product Cards:** These must feature a high-resolution render of the filament spool on a clean white background. Below the image, display the product name (Hanken Grotesk), followed by a technical \"spec-bar\" using JetBrains Mono (e.g., \"1.75mm | 1kg\"). The price and \"Add to Cart\" button should be high-contrast.\n- **Technical Filters:** Use accordion-style menus for Material, Color, and Diameter. Use custom-styled checkboxes that utilize the primary orange for the \"checked\" state. Include a \"Price Range\" slider with a charcoal track and orange handles.\n- **Buttons:**\n    - *Primary:* Solid Orange (#FF6600) with White text. Bold weight.\n    - *Secondary:* Ghost style with Charcoal border and text.\n    - *Icon-only:* Used for cart and search, using charcoal icons with high-contrast badge counts in orange.\n- **Input Fields:** Flat styling with a 1px border. On focus, the border changes to Primary Orange. Place \"Label\" text inside the field as a floating label or directly above in JetBrains Mono at 12px.\n- **Footer:** A multi-column \"Mega-footer\" with a Charcoal (#333333) background. Columns should include: Material Guides (Technical docs), Support, Company, and a Newsletter Signup. Use white text with 60% opacity for secondary links.",
+                                              "theme":  {
+                                                            "colorMode":  "LIGHT",
+                                                            "font":  "HANKEN_GROTESK",
+                                                            "roundness":  "ROUND_FOUR",
+                                                            "customColor":  "#ff6600",
+                                                            "headlineFont":  "HANKEN_GROTESK",
+                                                            "bodyFont":  "INTER",
+                                                            "labelFont":  "JETBRAINS_MONO",
+                                                            "namedColors":  {
+                                                                                "on_primary_fixed":  "#360f00",
+                                                                                "surface_container_high":  "#e8e8e8",
+                                                                                "primary_container":  "#ff6600",
+                                                                                "secondary_fixed":  "#e4e2e1",
+                                                                                "surface_container_lowest":  "#ffffff",
+                                                                                "surface":  "#f9f9f9",
+                                                                                "outline":  "#8e7164",
+                                                                                "on_error":  "#ffffff",
+                                                                                "on_tertiary_fixed":  "#001a41",
+                                                                                "surface_tint":  "#a33e00",
+                                                                                "background":  "#f9f9f9",
+                                                                                "surface_dim":  "#dadada",
+                                                                                "on_surface_variant":  "#5a4136",
+                                                                                "on_background":  "#1a1c1c",
+                                                                                "error_container":  "#ffdad6",
+                                                                                "on_surface":  "#1a1c1c",
+                                                                                "inverse_on_surface":  "#f1f1f1",
+                                                                                "error":  "#ba1a1a",
+                                                                                "on_primary_container":  "#561d00",
+                                                                                "primary_fixed_dim":  "#ffb596",
+                                                                                "on_secondary":  "#ffffff",
+                                                                                "on_primary":  "#ffffff",
+                                                                                "primary_fixed":  "#ffdbcd",
+                                                                                "on_tertiary_container":  "#002d66",
+                                                                                "outline_variant":  "#e3bfb1",
+                                                                                "on_secondary_fixed_variant":  "#474747",
+                                                                                "inverse_surface":  "#2f3131",
+                                                                                "primary":  "#a33e00",
+                                                                                "tertiary":  "#005bc0",
+                                                                                "tertiary_fixed_dim":  "#adc7ff",
+                                                                                "secondary_container":  "#e4e2e1",
+                                                                                "surface_variant":  "#e2e2e2",
+                                                                                "on_error_container":  "#93000a",
+                                                                                "on_secondary_fixed":  "#1b1c1c",
+                                                                                "secondary_fixed_dim":  "#c8c6c6",
+                                                                                "tertiary_container":  "#5895ff",
+                                                                                "on_secondary_container":  "#656464",
+                                                                                "secondary":  "#5f5e5e",
+                                                                                "surface_container_highest":  "#e2e2e2",
+                                                                                "tertiary_fixed":  "#d8e2ff",
+                                                                                "on_primary_fixed_variant":  "#7c2e00",
+                                                                                "surface_bright":  "#f9f9f9",
+                                                                                "on_tertiary_fixed_variant":  "#004493",
+                                                                                "surface_container":  "#eeeeee",
+                                                                                "surface_container_low":  "#f3f3f3",
+                                                                                "inverse_primary":  "#ffb596",
+                                                                                "on_tertiary":  "#ffffff"
+                                                                            },
+                                                            "designMd":  "---\nname: Pintofil\ncolors:\n  surface: \u0027#f9f9f9\u0027\n  surface-dim: \u0027#dadada\u0027\n  surface-bright: \u0027#f9f9f9\u0027\n  surface-container-lowest: \u0027#ffffff\u0027\n  surface-container-low: \u0027#f3f3f3\u0027\n  surface-container: \u0027#eeeeee\u0027\n  surface-container-high: \u0027#e8e8e8\u0027\n  surface-container-highest: \u0027#e2e2e2\u0027\n  on-surface: \u0027#1a1c1c\u0027\n  on-surface-variant: \u0027#5a4136\u0027\n  inverse-surface: \u0027#2f3131\u0027\n  inverse-on-surface: \u0027#f1f1f1\u0027\n  outline: \u0027#8e7164\u0027\n  outline-variant: \u0027#e3bfb1\u0027\n  surface-tint: \u0027#a33e00\u0027\n  primary: \u0027#a33e00\u0027\n  on-primary: \u0027#ffffff\u0027\n  primary-container: \u0027#ff6600\u0027\n  on-primary-container: \u0027#561d00\u0027\n  inverse-primary: \u0027#ffb596\u0027\n  secondary: \u0027#5f5e5e\u0027\n  on-secondary: \u0027#ffffff\u0027\n  secondary-container: \u0027#e4e2e1\u0027\n  on-secondary-container: \u0027#656464\u0027\n  tertiary: \u0027#005bc0\u0027\n  on-tertiary: \u0027#ffffff\u0027\n  tertiary-container: \u0027#5895ff\u0027\n  on-tertiary-container: \u0027#002d66\u0027\n  error: \u0027#ba1a1a\u0027\n  on-error: \u0027#ffffff\u0027\n  error-container: \u0027#ffdad6\u0027\n  on-error-container: \u0027#93000a\u0027\n  primary-fixed: \u0027#ffdbcd\u0027\n  primary-fixed-dim: \u0027#ffb596\u0027\n  on-primary-fixed: \u0027#360f00\u0027\n  on-primary-fixed-variant: \u0027#7c2e00\u0027\n  secondary-fixed: \u0027#e4e2e1\u0027\n  secondary-fixed-dim: \u0027#c8c6c6\u0027\n  on-secondary-fixed: \u0027#1b1c1c\u0027\n  on-secondary-fixed-variant: \u0027#474747\u0027\n  tertiary-fixed: \u0027#d8e2ff\u0027\n  tertiary-fixed-dim: \u0027#adc7ff\u0027\n  on-tertiary-fixed: \u0027#001a41\u0027\n  on-tertiary-fixed-variant: \u0027#004493\u0027\n  background: \u0027#f9f9f9\u0027\n  on-background: \u0027#1a1c1c\u0027\n  surface-variant: \u0027#e2e2e2\u0027\ntypography:\n  display-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.1\u0027\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: \u0027600\u0027\n    lineHeight: \u00271.2\u0027\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 24px\n    fontWeight: \u0027600\u0027\n    lineHeight: \u00271.3\u0027\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.6\u0027\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.5\u0027\n  label-tech:\n    fontFamily: JetBrains Mono\n    fontSize: 13px\n    fontWeight: \u0027500\u0027\n    lineHeight: \u00271.2\u0027\n    letterSpacing: 0.05em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 28px\n    fontWeight: \u0027600\u0027\n    lineHeight: \u00271.2\u0027\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 40px\n  stack-sm: 4px\n  stack-md: 16px\n  stack-lg: 32px\n---\n\n## Brand \u0026 Style\nThe design system for this high-end 3D printing filament store is built upon a **Corporate Modern** aesthetic with a **Technical** edge. It targets engineering professionals, rapid prototyping labs, and industrial designers who demand precision and reliability. \n\nThe visual narrative focuses on \"Engineered Performance.\" This is achieved through a structural layout, high-contrast action elements, and a clean, laboratory-like atmosphere. The interface should feel as precise as the 3D printers its customers operate—utilizing clear hierarchies, generous whitespace, and sharp functional accents to evoke a sense of premium quality and technical expertise.\n\n## Colors\nThe palette is dominated by high-utility neutrals to ensure the product (the filament) remains the focal point.\n\n- **Primary (#FF6600):** Used exclusively for primary actions, progress indicators, and critical \"Buy\" buttons. It represents heat, energy, and the extrusion process.\n- **Secondary (#333333):** The \"Charcoal\" foundation. Used for high-level headings and primary body text to ensure maximum legibility against light backgrounds.\n- **Neutral/Backgrounds:** A tiered system of White (#FFFFFF) for page containers and Light Gray (#F5F5F5) for section backgrounds and technical sidebars.\n- **Semantic Accents:** Success (Green), Warning (Amber), and Info (Blue) are used sparingly within technical data sheets and stock status labels.\n\n## Typography\nThe typography system balances modern sans-serif fonts with a monospaced font for technical specifications.\n\n- **Headlines:** Use **Hanken Grotesk** for a sharp, contemporary, and engineered feel. It provides a strong geometric foundation for product names and category headers.\n- **Body:** **Inter** is used for descriptions and UI labels for its world-class legibility and neutral tone.\n- **Technical Labels:** **JetBrains Mono** is introduced for \"Data Values\" (e.g., Shore Hardness, Print Temp, Diameter). This monospaced choice reinforces the \"Spec Sheet\" aesthetic critical to technical users.\n\n## Layout \u0026 Spacing\nThis design system utilizes a **12-column fluid grid** with a maximum container width of 1280px. \n\nThe spacing rhythm is strictly based on an **8px base unit**. \n- **Desktop:** 24px gutters with 40px outer margins. Sidebar filters occupy 3 columns (or a fixed 280px width) while the product grid occupies the remaining 9 columns.\n- **Mobile:** The layout collapses to a single column with 16px margins.\n- **Technical density:** For filter panels and spec tables, the vertical spacing is reduced to 4px (stack-sm) to allow for high data density without excessive scrolling.\n\n## Elevation \u0026 Depth\nDepth is communicated through **Low-contrast Outlines** and **Tonal Layers** rather than heavy shadows, maintaining a \"precision instrument\" feel.\n\n- **Level 0 (Base):** Light Gray (#F5F5F5) for the canvas.\n- **Level 1 (Cards/Containers):** Pure White (#FFFFFF) with a 1px solid border (#E0E0E0).\n- **Interactive State:** When hovered, elements receive a soft, ultra-diffused shadow (0px 8px 24px rgba(0,0,0,0.06)) to indicate lift without feeling \"floaty.\"\n- **Overlays:** Modals and tooltips use a slightly thicker border and a background blur (12px) if positioned over busy technical charts.\n\n## Shapes\nIn line with the technical and modern brand personality, this design system uses **Soft (0.25rem)** roundedness. \n\n- **Standard Elements:** Buttons, input fields, and technical chips use a 4px (0.25rem) radius.\n- **Product Cards:** Use `rounded-lg` (8px) to provide a subtle distinction from more functional UI elements.\n- **Interactive Tags:** Color-coded material tags (e.g., PLA, TPU) should be rectangular with the standard 4px radius, avoiding pill shapes to maintain a professional, non-consumerist look.\n\n## Components\n\n- **Product Cards:** These must feature a high-resolution render of the filament spool on a clean white background. Below the image, display the product name (Hanken Grotesk), followed by a technical \"spec-bar\" using JetBrains Mono (e.g., \"1.75mm | 1kg\"). The price and \"Add to Cart\" button should be high-contrast.\n- **Technical Filters:** Use accordion-style menus for Material, Color, and Diameter. Use custom-styled checkboxes that utilize the primary orange for the \"checked\" state. Include a \"Price Range\" slider with a charcoal track and orange handles.\n- **Buttons:**\n    - *Primary:* Solid Orange (#FF6600) with White text. Bold weight.\n    - *Secondary:* Ghost style with Charcoal border and text.\n    - *Icon-only:* Used for cart and search, using charcoal icons with high-contrast badge counts in orange.\n- **Input Fields:** Flat styling with a 1px border. On focus, the border changes to Primary Orange. Place \"Label\" text inside the field as a floating label or directly above in JetBrains Mono at 12px.\n- **Footer:** A multi-column \"Mega-footer\" with a Charcoal (#333333) background. Columns should include: Material Guides (Technical docs), Support, Company, and a Newsletter Signup. Use white text with 60% opacity for secondary links.",
+                                                            "colorVariant":  "FIDELITY",
+                                                            "overridePrimaryColor":  "#ff6600",
+                                                            "overrideSecondaryColor":  "#333333",
+                                                            "overrideTertiaryColor":  "#007bff",
+                                                            "overrideNeutralColor":  "#f5f5f5",
+                                                            "spacingScale":  2,
+                                                            "typography":  {
+                                                                               "display-lg":  {
+                                                                                                  "fontFamily":  "Hanken Grotesk",
+                                                                                                  "fontSize":  "48px",
+                                                                                                  "fontWeight":  "700",
+                                                                                                  "lineHeight":  "1.1",
+                                                                                                  "letterSpacing":  "-0.02em"
+                                                                                              },
+                                                                               "headline-lg-mobile":  {
+                                                                                                          "fontFamily":  "Hanken Grotesk",
+                                                                                                          "fontSize":  "28px",
+                                                                                                          "fontWeight":  "600",
+                                                                                                          "lineHeight":  "1.2"
+                                                                                                      },
+                                                                               "headline-md":  {
+                                                                                                   "fontFamily":  "Hanken Grotesk",
+                                                                                                   "fontSize":  "24px",
+                                                                                                   "fontWeight":  "600",
+                                                                                                   "lineHeight":  "1.3"
+                                                                                               },
+                                                                               "body-lg":  {
+                                                                                               "fontFamily":  "Inter",
+                                                                                               "fontSize":  "18px",
+                                                                                               "fontWeight":  "400",
+                                                                                               "lineHeight":  "1.6"
+                                                                                           },
+                                                                               "body-md":  {
+                                                                                               "fontFamily":  "Inter",
+                                                                                               "fontSize":  "16px",
+                                                                                               "fontWeight":  "400",
+                                                                                               "lineHeight":  "1.5"
+                                                                                           },
+                                                                               "headline-lg":  {
+                                                                                                   "fontFamily":  "Hanken Grotesk",
+                                                                                                   "fontSize":  "32px",
+                                                                                                   "fontWeight":  "600",
+                                                                                                   "lineHeight":  "1.2"
+                                                                                               },
+                                                                               "label-tech":  {
+                                                                                                  "fontFamily":  "JetBrains Mono",
+                                                                                                  "fontSize":  "13px",
+                                                                                                  "fontWeight":  "500",
+                                                                                                  "lineHeight":  "1.2",
+                                                                                                  "letterSpacing":  "0.05em"
+                                                                                              }
+                                                                           },
+                                                            "spacing":  {
+                                                                            "container-max":  "1280px",
+                                                                            "base":  "8px",
+                                                                            "margin-desktop":  "40px",
+                                                                            "stack-md":  "16px",
+                                                                            "stack-sm":  "4px",
+                                                                            "margin-mobile":  "16px",
+                                                                            "stack-lg":  "32px",
+                                                                            "gutter":  "24px"
+                                                                        },
+                                                            "headlineFontFamily":  "Hanken Grotesk",
+                                                            "bodyFontFamily":  "Inter",
+                                                            "labelFontFamily":  "Jetbrains Mono"
+                                                        }
+                                          },
+                         "version":  "1"
+                     }
+}
