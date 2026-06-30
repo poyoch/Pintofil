@@ -63,19 +63,52 @@
 
 <main class="pt-24 pb-stack-lg min-h-[60vh] px-margin-desktop max-w-container-max mx-auto">
     <div class="max-w-4xl mx-auto">
-        <h1 class="font-display-md text-display-md text-on-surface mb-8">Ajustes de PLA</h1>
-        <div class="bg-surface-container rounded-xl p-8 border border-outline-variant shadow-sm">
-            <p class="text-secondary font-body-lg mb-6">
-                Página en construcción. Aquí encontrarás toda la información detallada sobre Ajustes de PLA. 
-                Estamos trabajando para brindarte el mejor contenido técnico para tus impresiones 3D.
-            </p>
-            <p class="text-secondary font-body-md mb-6">
-                En Pintofil, nos comprometemos a proporcionar filamentos de impresión 3D de grado industrial, asegurando calidad, precisión y soporte continuo.
-            </p>
-            <a href="index.html" class="inline-flex items-center gap-2 text-primary font-bold hover:underline">
-                <span class="material-symbols-outlined">arrow_back</span>
-                Volver al inicio
-            </a>
+        <h1 class="font-display-md text-display-md text-on-surface mb-8">Ajustes de Impresión: PLA</h1>
+        <div class="bg-surface-container rounded-xl p-8 border border-outline-variant shadow-sm prose prose-slate max-w-none">
+            <h2 class="font-headline-md text-on-surface mb-4">Parámetros Recomendados</h2>
+            <p class="text-secondary mb-6">El PLA (Ácido Poliláctico) es el material más utilizado en impresión 3D debido a su facilidad de uso. A continuación, nuestros parámetros recomendados para el PLA Pintofil.</p>
+            
+            <table class="w-full text-left border-collapse mb-8">
+                <thead>
+                    <tr class="border-b border-outline-variant">
+                        <th class="py-2 font-bold text-on-surface">Parámetro</th>
+                        <th class="py-2 font-bold text-on-surface">Valor Recomendado</th>
+                    </tr>
+                </thead>
+                <tbody class="text-secondary">
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">Temperatura del Nozzle (Boquilla)</td>
+                        <td class="py-2">195°C - 215°C</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">Temperatura de la Cama</td>
+                        <td class="py-2">50°C - 60°C (Opcional, pero recomendada)</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">Velocidad de Impresión</td>
+                        <td class="py-2">40 - 100 mm/s</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">Retracción (Direct Drive)</td>
+                        <td class="py-2">0.8 - 1.5 mm a 30-40 mm/s</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">Retracción (Bowden)</td>
+                        <td class="py-2">4.0 - 6.0 mm a 40-50 mm/s</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2">Ventilador de Capa</td>
+                        <td class="py-2">100% (Apagado en la primera capa)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="font-headline-md text-on-surface mb-4">Solución de Problemas Comunes</h2>
+            <ul class="list-disc pl-5 text-secondary space-y-2 mb-6">
+                <li><strong>Falta de adherencia a la cama:</strong> Limpie la cama con alcohol isopropílico. Asegure que la nivelación es correcta (primera capa ligeramente aplastada). Aumente la temperatura de la cama a 60°C.</li>
+                <li><strong>Stringing (Hilos):</strong> Reduzca la temperatura de impresión en pasos de 5°C. Aumente la distancia de retracción ligeramente.</li>
+                <li><strong>Deformación (Warping):</strong> Aunque es raro en PLA, asegure que no hay corrientes de aire frío apuntando a la impresora y que el ventilador de capa esté apagado en las primeras 2-3 capas.</li>
+            </ul>
         </div>
     </div>
 </main>

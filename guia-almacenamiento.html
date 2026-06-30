@@ -63,19 +63,61 @@
 
 <main class="pt-24 pb-stack-lg min-h-[60vh] px-margin-desktop max-w-container-max mx-auto">
     <div class="max-w-4xl mx-auto">
-        <h1 class="font-display-md text-display-md text-on-surface mb-8">Guía de Almacenamiento</h1>
-        <div class="bg-surface-container rounded-xl p-8 border border-outline-variant shadow-sm">
-            <p class="text-secondary font-body-lg mb-6">
-                Página en construcción. Aquí encontrarás toda la información detallada sobre Guía de Almacenamiento. 
-                Estamos trabajando para brindarte el mejor contenido técnico para tus impresiones 3D.
-            </p>
-            <p class="text-secondary font-body-md mb-6">
-                En Pintofil, nos comprometemos a proporcionar filamentos de impresión 3D de grado industrial, asegurando calidad, precisión y soporte continuo.
-            </p>
-            <a href="index.html" class="inline-flex items-center gap-2 text-primary font-bold hover:underline">
-                <span class="material-symbols-outlined">arrow_back</span>
-                Volver al inicio
-            </a>
+        <h1 class="font-display-md text-display-md text-on-surface mb-8">Guía de Almacenamiento de Filamentos</h1>
+        <div class="bg-surface-container rounded-xl p-8 border border-outline-variant shadow-sm prose prose-slate max-w-none">
+            <p class="text-secondary mb-6">La humedad es el enemigo número uno de la impresión 3D. Prácticamente todos los filamentos absorben humedad del aire (higroscopía), lo que afecta dramáticamente la calidad de impresión.</p>
+
+            <h2 class="font-headline-md text-on-surface mt-6 mb-4">Síntomas de Filamento Húmedo</h2>
+            <ul class="list-disc pl-5 text-secondary space-y-2 mb-6">
+                <li>Sonidos de "chisporroteo" o estallidos al imprimir (el agua hirviendo en la boquilla).</li>
+                <li>Exceso de hilos (stringing) y exudado (oozing).</li>
+                <li>Superficies rugosas o con burbujas.</li>
+                <li>Pérdida de adherencia entre capas y piezas frágiles.</li>
+                <li>En filamentos como PLA o PETG, el material se vuelve extremadamente quebradizo y se rompe en el carrete.</li>
+            </ul>
+
+            <h2 class="font-headline-md text-on-surface mt-8 mb-4">Mejores Prácticas de Almacenamiento</h2>
+            <ol class="list-decimal pl-5 text-secondary space-y-3 mb-6">
+                <li><strong>Cajas Secas (Dry Boxes):</strong> Almacene los rollos abiertos en recipientes herméticos con desecante (Gel de Sílice). Trate de mantener la humedad relativa dentro del contenedor por debajo del 20%.</li>
+                <li><strong>Bolsas al Vacío:</strong> Para almacenamiento a largo plazo, vuelva a sellar los filamentos al vacío con un paquete de desecante.</li>
+                <li><strong>No deje los rollos en la impresora:</strong> Si no va a imprimir en un par de días, retire el filamento y guárdelo.</li>
+            </ol>
+
+            <h2 class="font-headline-md text-on-surface mt-8 mb-4">Cómo Secar Filamentos</h2>
+            <p class="text-secondary mb-4">Si su filamento ya ha absorbido humedad, puede secarlo utilizando un secador de filamentos dedicado o un deshidratador de alimentos. A continuación, las temperaturas y tiempos recomendados:</p>
+            
+            <table class="w-full text-left border-collapse mb-6">
+                <thead>
+                    <tr class="border-b border-outline-variant">
+                        <th class="py-2 font-bold text-on-surface">Material</th>
+                        <th class="py-2 font-bold text-on-surface">Temperatura de Secado</th>
+                        <th class="py-2 font-bold text-on-surface">Tiempo Recomendado</th>
+                    </tr>
+                </thead>
+                <tbody class="text-secondary">
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">PLA</td>
+                        <td class="py-2">45°C - 50°C</td>
+                        <td class="py-2">4 - 6 horas</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">PETG</td>
+                        <td class="py-2">60°C - 65°C</td>
+                        <td class="py-2">6 - 8 horas</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/50">
+                        <td class="py-2">ABS / ASA</td>
+                        <td class="py-2">75°C - 80°C</td>
+                        <td class="py-2">4 - 6 horas</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2">TPU / Flexible</td>
+                        <td class="py-2">55°C - 60°C</td>
+                        <td class="py-2">8 - 12 horas</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-sm text-secondary italic">Nota: ¡No exceda la temperatura de secado recomendada para el PLA, o fundirá el rollo entero!</p>
         </div>
     </div>
 </main>
