@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="scroll-smooth light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="description" content="Accesorios para impresión 3D de Pintofil: boquillas, camas calientes, kits de mantenimiento, herramientas y consumibles de calidad industrial.">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Accesorios para Impresión 3D | Pintofil</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tailwind-config.js"></script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}
+  .spec-row:nth-child(odd){background:rgba(0,0,0,0.02);}
+  .hero-bg{background:linear-gradient(135deg,#f0f0f0 0%,#e0e0e0 100%);}
+  .acc-card{transition:transform .3s ease,box-shadow .3s ease;}
+  .acc-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.10);}
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant transition-all duration-300 h-20">
+<nav class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50 transition-all duration-300 relative">
+<div class="flex items-center gap-8 h-full">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2" href="index.html">
+<span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1;">precision_manufacturing</span>Pintofil</a>
+<div class="hidden md:flex items-center gap-8 ml-8 h-full">
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="index.html">Inicio</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-primary border-primary" href="catalogo.html">Catálogo</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="nosotros.html">Nosotros</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="contacto.html">Contacto</a>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="text-secondary hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-2xl">person</span></button>
+<button id="mobile-menu-btn" class="md:hidden text-secondary hover:text-primary transition-colors active:scale-95 ml-2"><span class="material-symbols-outlined text-2xl">menu</span></button>
+</div>
+</nav>
+<div id="mobile-menu" class="fixed inset-0 top-20 bg-surface z-40 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto border-t border-outline-variant shadow-lg">
+<div class="flex flex-col p-6 gap-4">
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="index.html">Inicio</a>
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="catalogo.html">Catálogo</a>
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="nosotros.html">Nosotros</a>
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="contacto.html">Contacto</a>
+</div>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg pt-32 pb-16 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+  <nav class="flex items-center gap-2 text-sm text-secondary mb-6">
+    <a href="index.html" class="hover:text-primary">Inicio</a>
+    <span class="material-symbols-outlined text-base">chevron_right</span>
+    <a href="catalogo.html" class="hover:text-primary">Catálogo</a>
+    <span class="material-symbols-outlined text-base">chevron_right</span>
+    <span class="text-on-surface font-medium">Accesorios</span>
+  </nav>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-block bg-secondary text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4">Accesorios 3D</span>
+      <h1 class="font-display-md text-on-surface mb-4 leading-tight">Todo lo que necesitas<br/><span class="text-secondary">para imprimir mejor</span></h1>
+      <p class="text-secondary font-body-lg mb-8">Un buen filamento necesita un buen hardware. Pintofil ofrece boquillas de precisión, camas calientes, superficies de adherencia, herramientas de post-proceso y kits de mantenimiento para que tu impresora opere al máximo rendimiento cada día.</p>
+      <div class="flex flex-wrap gap-3 mb-8">
+        <span class="flex items-center gap-2 bg-white border border-outline-variant rounded-full px-4 py-2 text-sm font-medium"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Compatible con todas las marcas</span>
+        <span class="flex items-center gap-2 bg-white border border-outline-variant rounded-full px-4 py-2 text-sm font-medium"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Grado industrial</span>
+        <span class="flex items-center gap-2 bg-white border border-outline-variant rounded-full px-4 py-2 text-sm font-medium"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Garantía Pintofil</span>
+      </div>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-secondary text-white font-bold px-8 py-4 rounded-lg hover:brightness-110 transition-all active:scale-95">
+        <span class="material-symbols-outlined">headset_mic</span>Consultar disponibilidad
+      </a>
+    </div>
+    <div class="flex justify-center">
+      <div class="w-64 h-64 bg-gray-100 rounded-3xl shadow-xl border border-outline-variant flex items-center justify-center">
+        <svg width="130" height="130" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Filament tube (PTFE) coming in from top -->
+          <rect x="16" y="1" width="6" height="5" rx="1.5" fill="#d1d5db" stroke="#9ca3af" stroke-width="0.8"/>
+          <!-- Extruder/cold end body -->
+          <rect x="11" y="5" width="16" height="6" rx="1.5" fill="#d1d5db" stroke="#6b7280" stroke-width="1"/>
+          <!-- Heater break (thermal barrier) -->
+          <rect x="15" y="11" width="8" height="3" rx="0.5" fill="#9ca3af" stroke="#6b7280" stroke-width="0.8"/>
+          <!-- Heater block -->
+          <rect x="10" y="14" width="18" height="10" rx="1.5" fill="#6b7280" stroke="#374151" stroke-width="1.2"/>
+          <!-- Heater cartridge (orange) -->
+          <rect x="25.5" y="16" width="5" height="5" rx="1" fill="#a33e00" stroke="#7c2d00" stroke-width="0.8"/>
+          <line x1="28" y1="14" x2="28" y2="16" stroke="#a33e00" stroke-width="1" stroke-linecap="round"/>
+          <!-- Thermistor (small black box) -->
+          <rect x="7.5" y="17" width="3" height="3" rx="0.5" fill="#1f2937"/>
+          <line x1="9" y1="17" x2="9" y2="14" stroke="#4b5563" stroke-width="0.8"/>
+          <!-- Nozzle taper -->
+          <path d="M13 24 L16 32 L22 32 L25 24 Z" fill="#9ca3af" stroke="#374151" stroke-width="1"/>
+          <!-- Nozzle tip -->
+          <ellipse cx="19" cy="32" rx="3" ry="1.2" fill="#374151"/>
+          <!-- Melted filament extruding -->
+          <path d="M18 32 Q17.5 34 18 36 Q18.5 37.5 19 37.5 Q19.5 37.5 20 36 Q20.5 34 20 32" fill="#ff7a1a" opacity="0.85"/>
+          <!-- Heat glow at nozzle tip -->
+          <ellipse cx="19" cy="32" rx="5" ry="2" fill="#ff6b00" opacity="0.2"/>
+          <!-- Bolt holes on heater block -->
+          <circle cx="12.5" cy="17" r="1" fill="#374151"/>
+          <circle cx="12.5" cy="21" r="1" fill="#374151"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CATEGORÍAS -->
+<section class="py-16 px-margin-desktop max-w-container-max mx-auto">
+  <h2 class="font-headline-lg text-on-surface mb-10">Categorías de Accesorios</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Boquillas -->
+    <div class="acc-card bg-white border border-outline-variant rounded-2xl p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-2xl text-primary-container" style="font-variation-settings:'FILL' 1;">grain</span>
+        </div>
+        <h3 class="font-headline-md">Boquillas de Precisión</h3>
+      </div>
+      <p class="text-secondary text-sm mb-5">Boquillas de alta calidad fabricadas en latón, acero inoxidable y acero endurecido para filamentos abrasivos. Disponibles de 0.2 a 1.0mm.</p>
+      <div class="space-y-2 mb-5">
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Latón E3D estándar (0.4mm)</span><span class="font-bold">S/ 18</span>
+        </div>
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Acero endurecido (0.4mm)</span><span class="font-bold">S/ 42</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-secondary">Nozzle rubí (abrasivos)</span><span class="font-bold">S/ 145</span>
+        </div>
+      </div>
+      <p class="text-xs text-secondary">Compatible con: Creality, Bambu Lab, Prusa, Voron, E3D y más.</p>
+    </div>
+
+    <!-- Camas de impresión -->
+    <div class="acc-card bg-white border border-outline-variant rounded-2xl p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-2xl text-primary-container" style="font-variation-settings:'FILL' 1;">layers</span>
+        </div>
+        <h3 class="font-headline-md">Superficies de Adherencia</h3>
+      </div>
+      <p class="text-secondary text-sm mb-5">Plataformas PEI, vidrio borosilicato, láminas magnéticas y BuildTak. Garantizan primera capa perfecta y fácil remoción de piezas.</p>
+      <div class="space-y-2 mb-5">
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Lámina PEI 235×235mm</span><span class="font-bold">S/ 65</span>
+        </div>
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Vidrio borosilicato 220×220</span><span class="font-bold">S/ 45</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-secondary">Placa magnética flexible doble cara</span><span class="font-bold">S/ 89</span>
+        </div>
+      </div>
+      <p class="text-xs text-secondary">PLA, PETG, ABS, TPU: cada material tiene su superficie ideal.</p>
+    </div>
+
+    <!-- Kits de mantenimiento -->
+    <div class="acc-card bg-white border border-outline-variant rounded-2xl p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-2xl text-primary-container" style="font-variation-settings:'FILL' 1;">build</span>
+        </div>
+        <h3 class="font-headline-md">Kits de Mantenimiento</h3>
+      </div>
+      <p class="text-secondary text-sm mb-5">Todo lo necesario para mantener tu impresora en óptimas condiciones. Kits con grasa, varillas de limpieza, filamento de purga y tornillos de repuesto.</p>
+      <div class="space-y-2 mb-5">
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Kit básico limpieza</span><span class="font-bold">S/ 35</span>
+        </div>
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Grasa lubricante 20ml</span><span class="font-bold">S/ 22</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-secondary">Kit completo pro</span><span class="font-bold">S/ 98</span>
+        </div>
+      </div>
+      <p class="text-xs text-secondary">Recomendamos mantenimiento preventivo cada 200h de impresión.</p>
+    </div>
+
+    <!-- Herramientas de post-proceso -->
+    <div class="acc-card bg-white border border-outline-variant rounded-2xl p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-2xl text-primary-container" style="font-variation-settings:'FILL' 1;">content_cut</span>
+        </div>
+        <h3 class="font-headline-md">Post-Proceso</h3>
+      </div>
+      <p class="text-secondary text-sm mb-5">Espátulas de acero, cortadores de soporte, limas de acabado, papel de lija gradado y kits de pintura base para acabados de nivel industrial.</p>
+      <div class="space-y-2 mb-5">
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Set espátulas + cortadores</span><span class="font-bold">S/ 28</span>
+        </div>
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Kit lijas 120–2000 grit</span><span class="font-bold">S/ 32</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-secondary">Spray imprimante + acabado</span><span class="font-bold">S/ 55</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desecantes -->
+    <div class="acc-card bg-white border border-outline-variant rounded-2xl p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 overflow-hidden">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Box body -->
+            <rect x="3" y="11" width="22" height="14" rx="1.5" fill="#e0f0ff" stroke="#2563eb" stroke-width="1.2"/>
+            <!-- Box lid -->
+            <rect x="2" y="8" width="24" height="4" rx="1" fill="#2563eb" opacity="0.8"/>
+            <!-- Lid latch -->
+            <rect x="11" y="7" width="6" height="2" rx="1" fill="#1d4ed8"/>
+            <!-- Spool inside -->
+            <circle cx="14" cy="18" r="4" fill="none" stroke="#2563eb" stroke-width="1.2"/>
+            <circle cx="14" cy="18" r="1.5" fill="#2563eb" opacity="0.6"/>
+            <!-- Humidity % indicator -->
+            <rect x="19" y="14" width="4" height="6" rx="0.5" fill="#fff" stroke="#2563eb" stroke-width="0.8"/>
+            <rect x="19.5" y="17" width="3" height="2.5" rx="0.3" fill="#2563eb" opacity="0.5"/>
+            <!-- Moisture X drop (crossed) -->
+            <line x1="20" y1="14.5" x2="22.5" y2="17" stroke="#ef4444" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="22.5" y1="14.5" x2="20" y2="17" stroke="#ef4444" stroke-width="0.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-headline-md">Almacenamiento y Secado</h3>
+
+      </div>
+      <p class="text-secondary text-sm mb-5">Boxes herméticos con desecante, secadoras de filamento y bolsas vacuum. Filamentos secos = menos defectos, mejor adherencia entre capas.</p>
+      <div class="space-y-2 mb-5">
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Caja sellada con RH display</span><span class="font-bold">S/ 48</span>
+        </div>
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Secadora de filamento 2 spools</span><span class="font-bold">S/ 145</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-secondary">Silica gel 200g recargable</span><span class="font-bold">S/ 18</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repuestos hotend -->
+    <div class="acc-card bg-white border border-outline-variant rounded-2xl p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-2xl text-primary-container" style="font-variation-settings:'FILL' 1;">heat</span>
+        </div>
+        <h3 class="font-headline-md">Repuestos Hotend</h3>
+      </div>
+      <p class="text-secondary text-sm mb-5">Bloques calefactores, termistores NTC, cartuchos calefactores, rupturas térmicas y termopares tipo K para las marcas más populares del mercado.</p>
+      <div class="space-y-2 mb-5">
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Termistor NTC 100K (10 uds)</span><span class="font-bold">S/ 25</span>
+        </div>
+        <div class="flex justify-between text-sm border-b border-outline-variant pb-2">
+          <span class="text-secondary">Cartucho calefactor 40W 24V</span><span class="font-bold">S/ 22</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-secondary">Bloque calefactor E3D v6</span><span class="font-bold">S/ 38</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPATIBILIDAD -->
+<section class="bg-surface-container py-16 px-margin-desktop">
+  <div class="max-w-container-max mx-auto">
+    <h2 class="font-headline-lg text-on-surface mb-4">Impresoras compatibles</h2>
+    <p class="text-secondary mb-8 max-w-2xl">Nuestros accesorios son compatibles con las marcas más usadas en el mercado peruano y global:</p>
+    <div class="flex flex-wrap gap-3">
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Creality (Ender / CR / K series)</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Bambu Lab (X1, P1, A1)</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Prusa (MK4, Mini, XL)</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Voron (0, 2.4, Trident)</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Anycubic Kobra</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Artillery Sidewinder / Genius</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Sovol SV06 / SV07</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Ultimaker S series</span>
+      <span class="bg-white border border-outline-variant rounded-full px-5 py-2 font-medium text-sm">Raise3D Pro</span>
+    </div>
+    <p class="text-secondary text-sm mt-6">¿No encuentras tu impresora? <a href="contacto.html" class="text-primary-container font-bold hover:underline">Consúltanos</a>, probablemente la tengamos.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+  <div>
+    <h2 class="font-headline-lg text-on-surface mb-2">¿Necesitas algo específico?</h2>
+    <p class="text-secondary max-w-xl">Nuestro equipo puede conseguir repuestos y accesorios especiales por encargo. Envíanos los detalles de tu impresora y te cotizamos en 24h.</p>
+  </div>
+  <div class="flex gap-4 flex-wrap shrink-0">
+    <a href="contacto.html" class="px-8 py-4 bg-primary-container text-white font-bold rounded-lg hover:brightness-110 transition-all active:scale-95 flex items-center gap-2">
+      <span class="material-symbols-outlined">headset_mic</span>Solicitar cotización
+    </a>
+    <a href="catalogo.html" class="px-8 py-4 border border-secondary text-secondary font-bold rounded-lg hover:bg-secondary/5 transition-all active:scale-95">Ver Catálogo</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-secondary py-stack-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-6 col-span-2 md:col-span-1">
+<a class="font-headline-md font-black text-white flex items-center gap-2" href="index.html"><span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1;">precision_manufacturing</span>Pintofil</a>
+<p class="text-white opacity-60 text-sm">© 2024 Pintofil Advanced Materials. Certificación ISO 9001.</p>
+</div>
+<div class="flex flex-col gap-3"><h4 class="text-white font-bold border-b border-white/10 pb-2">Materiales</h4>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-pla.html">Guía PLA</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-petg.html">Guía PETG</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-resinas.html">Guía Resinas</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-accesorios.html">Accesorios</a>
+</div>
+<div class="flex flex-col gap-3"><h4 class="text-white font-bold border-b border-white/10 pb-2">Soporte</h4>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="politica-envio.html">Política de Envío</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="politica-reembolso.html">Reembolsos</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="contacto.html">Contacto</a>
+</div>
+<div class="flex flex-col gap-3 col-span-2 md:col-span-1"><h4 class="text-white font-bold border-b border-white/10 pb-2">Contacto</h4>
+<p class="text-white opacity-60 text-sm">tech@pintofil.pe</p>
+<p class="text-white opacity-60 text-sm">+51 (01) 421 9999</p>
+<p class="text-white opacity-60 text-sm">Lun–Vie 09:00–18:00</p>
+</div>
+</div>
+</footer>
+<script>
+  const btn=document.getElementById('mobile-menu-btn'),menu=document.getElementById('mobile-menu');let open=false;
+  if(btn&&menu){btn.addEventListener('click',()=>{open=!open;menu.classList.toggle('translate-x-full',!open);btn.innerHTML=open?'<span class="material-symbols-outlined text-2xl">close</span>':'<span class="material-symbols-outlined text-2xl">menu</span>';});}
+  window.addEventListener('scroll',()=>{const h=document.querySelector('header');if(window.scrollY>20){h.classList.add('shadow-md','h-16');h.classList.remove('h-20');}else{h.classList.remove('shadow-md','h-16');h.classList.add('h-20');}});
+</script>
+</body></html>

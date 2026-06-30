@@ -23,36 +23,51 @@
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
-<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50">
-<div class="flex items-center gap-8">
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant transition-all duration-300 h-20">
+<nav class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50 transition-all duration-300 relative">
+<div class="flex items-center gap-8 h-full">
 <a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2" href="index.html">
 <span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
                     Pintofil
                 </a>
-<div class="hidden md:flex items-center gap-8 ml-8 h-20">
+<div class="hidden md:flex items-center gap-8 ml-8 h-full">
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="index.html">Inicio</a>
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="catalogo.html">Catálogo</a>
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-primary border-primary" href="nosotros.html">Nosotros</a>
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="contacto.html">Contacto</a>
 </div>
 </div>
-<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 lg:gap-6">
 <form action="catalogo.html" method="GET" class="hidden lg:flex items-center bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
 <span class="material-symbols-outlined text-secondary mr-2">search</span>
 <input name="q" class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Buscar..." type="search" required/>
 <button type="submit" class="hidden"></button>
 </form>
-<div class="flex items-center gap-4">
-<button class="text-secondary hover:text-primary transition-colors active:scale-95">
-<span class="material-symbols-outlined text-2xl">shopping_cart</span>
-</button>
+<div class="flex items-center gap-2 md:gap-4">
 <button class="text-secondary hover:text-primary transition-colors active:scale-95">
 <span class="material-symbols-outlined text-2xl">person</span>
+</button>
+<button id="mobile-menu-btn" class="md:hidden text-secondary hover:text-primary transition-colors active:scale-95 ml-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
 </button>
 </div>
 </div>
 </nav>
+<div id="mobile-menu" class="fixed inset-0 top-20 bg-surface z-40 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto border-t border-outline-variant shadow-lg">
+<div class="flex flex-col p-6 gap-6">
+<form action="catalogo.html" method="GET" class="flex items-center bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary mr-2">search</span>
+<input name="q" class="bg-transparent border-none focus:ring-0 text-body-md w-full" placeholder="Buscar..." type="search" required/>
+<button type="submit" class="hidden"></button>
+</form>
+<div class="flex flex-col gap-4">
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="index.html">Inicio</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="catalogo.html">Catálogo</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="nosotros.html">Nosotros</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="contacto.html">Contacto</a>
+</div>
+</div>
+</div>
 </header>
 <main class="pt-20">
 <!-- Hero Section: Identity & Impact -->
@@ -182,10 +197,10 @@
 </div>
 </li>
 </ul>
-<button class="mt-12 bg-primary-container text-white px-8 py-4 font-bold hover:bg-on-primary-container transition-all flex items-center gap-stack-md active:scale-95">
+<a href="catalogo.html" class="mt-12 bg-primary-container text-white px-8 py-4 font-bold hover:bg-on-primary-container transition-all inline-flex items-center gap-stack-md active:scale-95">
                         Ver Catálogo de Materiales
                         <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
+                    </a>
 </div>
 </div>
 </section>
@@ -197,8 +212,8 @@
 <p class="text-white/60">Nuestros ingenieros de materiales están listos para asesorarte en tu próximo proyecto.</p>
 </div>
 <div class="flex gap-stack-md w-full md:w-auto transition-all duration-700 opacity-100 translate-y-0">
-<button class="flex-1 md:flex-none border border-white text-white px-8 py-3 font-medium hover:bg-white hover:text-on-surface transition-all">Consultoría Técnica</button>
-<button class="flex-1 md:flex-none bg-primary-container text-on-primary-container px-8 py-3 font-bold hover:bg-primary-container/90 transition-all">Contáctanos</button>
+<a href="catalogo.html" class="flex-1 md:flex-none border border-white text-white px-8 py-3 font-medium hover:bg-white hover:text-on-surface transition-all text-center">Ver Filamentos</a>
+<a href="contacto.html" class="flex-1 md:flex-none bg-primary-container text-on-primary-container px-8 py-3 font-bold hover:bg-primary-container/90 transition-all text-center">Contáctanos</a>
 </div>
 </div>
 </section>
@@ -224,20 +239,20 @@
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Guías de Materiales</h4>
 <div class="flex flex-col gap-3">
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Ajustes de PLA</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Datos Químicos PETG</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Fichas de Seguridad de Resina</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Guía de Almacenamiento</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="ajustes-pla.html">Ajustes de PLA</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="datos-petg.html">Datos Químicos PETG</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="seguridad-resina.html">Fichas de Seguridad de Resina</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="guia-almacenamiento.html">Guía de Almacenamiento</a>
 </div>
 </div>
 <!-- Soporte Técnico -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Soporte Técnico</h4>
 <div class="flex flex-col gap-3">
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Envío</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Privacidad</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Reembolso</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="contacto.html">Consulta de Venta al por Mayor</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="politica-envio.html">Política de Envío</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="politica-privacidad.html">Política de Privacidad</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="politica-reembolso.html">Política de Reembolso</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="venta-mayor.html">Consulta de Venta al por Mayor</a>
 </div>
 </div>
 <!-- Engineering Resources -->
@@ -259,8 +274,8 @@
 <div class="px-margin-desktop max-w-container-max mx-auto flex justify-between items-center text-white opacity-40 text-sm flex-col md:flex-row gap-4">
 <span>Polímeros Certificados de Alto Rendimiento</span>
 <div class="flex gap-6">
-<a class="hover:underline" href="nosotros.html">Términos de Servicio</a>
-<a class="hover:underline" href="nosotros.html">Cumplimiento de Seguridad</a>
+<a class="hover:underline" href="terminos-servicio.html">Términos de Servicio</a>
+<a class="hover:underline" href="cumplimiento-seguridad.html">Cumplimiento de Seguridad</a>
 </div>
 </div>
 </div>
@@ -283,4 +298,25 @@
     </script>
 
 
-</body></html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">close</span>';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">menu</span>';
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

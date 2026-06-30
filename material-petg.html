@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="scroll-smooth light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="description" content="Todo sobre filamento PETG de Pintofil: tipos, temperaturas, aplicaciones y comparativas. Resistencia química e impacto para piezas funcionales.">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filamento PETG — Guía Completa | Pintofil</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tailwind-config.js"></script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}
+  .spec-row:nth-child(odd){background:rgba(0,0,0,0.02);}
+  .hero-bg{background:linear-gradient(135deg,#f0f8ff 0%,#d4edff 100%);}
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant transition-all duration-300 h-20">
+<nav class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50 transition-all duration-300 relative">
+<div class="flex items-center gap-8 h-full">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2" href="index.html">
+<span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1;">precision_manufacturing</span>Pintofil</a>
+<div class="hidden md:flex items-center gap-8 ml-8 h-full">
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="index.html">Inicio</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-primary border-primary" href="catalogo.html">Catálogo</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="nosotros.html">Nosotros</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="contacto.html">Contacto</a>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="text-secondary hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-2xl">person</span></button>
+<button id="mobile-menu-btn" class="md:hidden text-secondary hover:text-primary transition-colors active:scale-95 ml-2"><span class="material-symbols-outlined text-2xl">menu</span></button>
+</div>
+</nav>
+<div id="mobile-menu" class="fixed inset-0 top-20 bg-surface z-40 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto border-t border-outline-variant shadow-lg">
+<div class="flex flex-col p-6 gap-4">
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="index.html">Inicio</a>
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="catalogo.html">Catálogo</a>
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="nosotros.html">Nosotros</a>
+<a class="font-medium text-lg py-2 border-b border-outline-variant" href="contacto.html">Contacto</a>
+</div>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg pt-32 pb-16 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+  <nav class="flex items-center gap-2 text-sm text-secondary mb-6">
+    <a href="index.html" class="hover:text-primary">Inicio</a>
+    <span class="material-symbols-outlined text-base">chevron_right</span>
+    <a href="catalogo.html" class="hover:text-primary">Catálogo</a>
+    <span class="material-symbols-outlined text-base">chevron_right</span>
+    <span class="text-on-surface font-medium">PETG</span>
+  </nav>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-block bg-tertiary-container text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4">Filamento PETG</span>
+      <h1 class="font-display-md text-on-surface mb-4 leading-tight">Polietileno Tereftalato<br/><span class="text-tertiary">Glicol Modificado</span></h1>
+      <p class="text-secondary font-body-lg mb-8">El PETG combina la facilidad de impresión del PLA con la resistencia mecánica y química del ABS, sin sus inconvenientes (olor, contracción). Es el material de elección para piezas funcionales, contenedores, y aplicaciones exteriores que exigen durabilidad real.</p>
+      <div class="flex flex-wrap gap-3 mb-8">
+        <span class="flex items-center gap-2 bg-white border border-outline-variant rounded-full px-4 py-2 text-sm font-medium"><span class="material-symbols-outlined text-tertiary text-base">check_circle</span>Resistente al impacto</span>
+        <span class="flex items-center gap-2 bg-white border border-outline-variant rounded-full px-4 py-2 text-sm font-medium"><span class="material-symbols-outlined text-tertiary text-base">check_circle</span>Resistencia química</span>
+        <span class="flex items-center gap-2 bg-white border border-outline-variant rounded-full px-4 py-2 text-sm font-medium"><span class="material-symbols-outlined text-tertiary text-base">check_circle</span>Semi-transparente disponible</span>
+        <span class="flex items-center gap-2 bg-white border border-outline-variant rounded-full px-4 py-2 text-sm font-medium"><span class="material-symbols-outlined text-tertiary text-base">check_circle</span>Baja contracción</span>
+      </div>
+      <a href="catalogo.html" class="inline-flex items-center gap-2 bg-tertiary-container text-white font-bold px-8 py-4 rounded-lg hover:brightness-110 transition-all active:scale-95">
+        <span class="material-symbols-outlined">shopping_bag</span>Comprar PETG
+      </a>
+    </div>
+    <div class="flex justify-center">
+      <div class="w-64 h-64 bg-teal-50 rounded-3xl shadow-xl border border-outline-variant flex items-center justify-center">
+        <svg width="130" height="130" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Flask body -->
+          <path d="M14 8 L14 19 L7 31 Q6 33 8 34 L30 34 Q32 33 31 31 L24 19 L24 8 Z" fill="#e0f7f4" stroke="#2a9d8f" stroke-width="1.3" stroke-linejoin="round"/>
+          <!-- Flask neck / top rim -->
+          <rect x="13" y="5" width="12" height="4" rx="2" fill="#2a9d8f" opacity="0.25"/>
+          <line x1="13" y1="8" x2="25" y2="8" stroke="#2a9d8f" stroke-width="1.5"/>
+          <!-- Bubbles in liquid -->
+          <circle cx="13" cy="28" r="1.2" fill="#2a9d8f" opacity="0.4"/>
+          <circle cx="18" cy="30" r="0.9" fill="#2a9d8f" opacity="0.4"/>
+          <circle cx="24" cy="27" r="1.4" fill="#2a9d8f" opacity="0.4"/>
+          <!-- Liquid fill -->
+          <path d="M9.5 28 Q14 23.5 19 25.5 Q24 27.5 28.5 23.5 L30.5 31 Q31.5 33.5 29.5 33.5 L8.5 33.5 Q6.5 33.5 7.5 31 Z" fill="#2a9d8f" opacity="0.65"/>
+          <!-- Molecular bonds (PETG structure) -->
+          <circle cx="12" cy="19" r="1.8" fill="#2a9d8f"/>
+          <circle cx="19" cy="14.5" r="1.8" fill="#0d7d71"/>
+          <circle cx="26" cy="19" r="1.8" fill="#2a9d8f"/>
+          <circle cx="22.5" cy="22" r="1.2" fill="#5bc4b8"/>
+          <line x1="13.7" y1="19" x2="17.2" y2="15.5" stroke="#2a9d8f" stroke-width="1.5"/>
+          <line x1="20.8" y1="15" x2="24.3" y2="18.5" stroke="#2a9d8f" stroke-width="1.5"/>
+          <line x1="26" y1="20.5" x2="23.5" y2="21.5" stroke="#5bc4b8" stroke-width="1" opacity="0.8"/>
+          <!-- UV resistance badge -->
+          <circle cx="29" cy="8" r="5" fill="#f59e0b"/>
+          <text x="29" y="11" text-anchor="middle" font-size="5" font-weight="bold" fill="#fff">UV</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SPECS -->
+<section class="py-16 px-margin-desktop max-w-container-max mx-auto">
+  <h2 class="font-headline-lg text-on-surface mb-8">Especificaciones Técnicas</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden shadow-sm">
+      <div class="bg-surface-container px-6 py-4 border-b border-outline-variant">
+        <h3 class="font-headline-md text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">thermostat</span>Parámetros de Impresión</h3>
+      </div>
+      <table class="w-full text-sm">
+        <tbody>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Temperatura de boquilla</td><td class="px-6 py-3 font-bold text-on-surface">230 – 250 °C</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Temperatura de cama</td><td class="px-6 py-3 font-bold text-on-surface">70 – 85 °C</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Velocidad recomendada</td><td class="px-6 py-3 font-bold text-on-surface">30 – 80 mm/s</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Ventilador de capa</td><td class="px-6 py-3 font-bold text-on-surface">25 – 50% (evitar stringing)</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Retracción típica</td><td class="px-6 py-3 font-bold text-on-surface">4 – 7 mm (Bowden), 1.5 – 3 mm (Direct)</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Superficie de adhesión</td><td class="px-6 py-3 font-bold text-on-surface">PEI, vidrio con laca, cinta PET</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden shadow-sm">
+      <div class="bg-surface-container px-6 py-4 border-b border-outline-variant">
+        <h3 class="font-headline-md text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">science</span>Propiedades Físicas</h3>
+      </div>
+      <table class="w-full text-sm">
+        <tbody>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Densidad</td><td class="px-6 py-3 font-bold text-on-surface">1.27 g/cm³</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Resistencia a la tracción</td><td class="px-6 py-3 font-bold text-on-surface">50 – 55 MPa</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Módulo de elasticidad</td><td class="px-6 py-3 font-bold text-on-surface">2200 MPa</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Temperatura de deflexión</td><td class="px-6 py-3 font-bold text-on-surface">70 – 80 °C</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Resistencia UV</td><td class="px-6 py-3 font-bold text-on-surface">Alta (superior a PLA)</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 text-secondary font-medium">Resistencia química</td><td class="px-6 py-3 font-bold text-on-surface">Ácidos diluidos, aceites, alcoholes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- VARIANTES -->
+<section class="py-16 px-margin-desktop max-w-container-max mx-auto">
+  <h2 class="font-headline-lg text-on-surface mb-4">Variantes de PETG Disponibles</h2>
+  <p class="text-secondary mb-10 max-w-2xl">Pintofil ofrece PETG en formulaciones para cada nivel de exigencia:</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white border border-outline-variant rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+      <span class="inline-block bg-tertiary-container text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest mb-3">PETG Estándar</span>
+      <h3 class="font-headline-md text-on-surface mb-2">PETG Industrial</h3>
+      <p class="text-secondary text-sm mb-4">Formulación base de alta resistencia. Semi-transparente en colores naturales. El referente para piezas mecánicas duraderas y contenedores.</p>
+      <ul class="text-xs text-secondary space-y-1"><li>✦ Desde S/ 75</li><li>✦ 1.75 / 2.85mm</li><li>✦ Colores opacos y semitransparentes</li></ul>
+    </div>
+    <div class="bg-white border border-outline-variant rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+      <span class="inline-block bg-on-surface text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest mb-3">PETG-CF</span>
+      <h3 class="font-headline-md text-on-surface mb-2">PETG Fibra de Carbono</h3>
+      <p class="text-secondary text-sm mb-4">Reforzado con fibras cortas de carbono al 20%. Rigidez extrema, aspecto técnico premium y peso reducido. Requiere boquilla de acero endurecido.</p>
+      <ul class="text-xs text-secondary space-y-1"><li>✦ Desde S/ 115</li><li>✦ Nozzle acero obligatorio</li><li>✦ Color grafito único</li></ul>
+    </div>
+    <div class="bg-white border border-outline-variant rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+      <span class="inline-block bg-blue-700 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest mb-3">PETG UV</span>
+      <h3 class="font-headline-md text-on-surface mb-2">PETG Alta Resistencia UV</h3>
+      <p class="text-secondary text-sm mb-4">Con estabilizador UV integrado para piezas de exterior permanente. Resiste el amarillamiento prolongado bajo luz solar directa.</p>
+      <ul class="text-xs text-secondary space-y-1"><li>✦ Desde S/ 82</li><li>✦ Exterior y semexterior</li><li>✦ Varios colores disponibles</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- PLA vs PETG comparison -->
+<section class="bg-surface-container py-16 px-margin-desktop">
+  <div class="max-w-container-max mx-auto">
+    <h2 class="font-headline-lg text-on-surface mb-8">PETG vs PLA — ¿Cuál elegir?</h2>
+    <div class="overflow-x-auto rounded-2xl border border-outline-variant bg-white shadow-sm">
+      <table class="min-w-full text-sm">
+        <thead class="bg-surface-container">
+          <tr>
+            <th class="px-6 py-4 text-left font-label-tech uppercase tracking-wide text-secondary">Característica</th>
+            <th class="px-6 py-4 text-center font-label-tech uppercase tracking-wide text-primary-container">PLA</th>
+            <th class="px-6 py-4 text-center font-label-tech uppercase tracking-wide text-tertiary">PETG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="spec-row"><td class="px-6 py-3 font-medium">Facilidad de impresión</td><td class="px-6 py-3 text-center">⭐⭐⭐⭐⭐</td><td class="px-6 py-3 text-center">⭐⭐⭐⭐</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 font-medium">Resistencia mecánica</td><td class="px-6 py-3 text-center">⭐⭐⭐</td><td class="px-6 py-3 text-center">⭐⭐⭐⭐</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 font-medium">Resistencia al calor</td><td class="px-6 py-3 text-center">⭐⭐ (52–65°C)</td><td class="px-6 py-3 text-center">⭐⭐⭐ (70–80°C)</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 font-medium">Resistencia química</td><td class="px-6 py-3 text-center">⭐⭐</td><td class="px-6 py-3 text-center">⭐⭐⭐⭐</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 font-medium">Acabado superficial</td><td class="px-6 py-3 text-center">Brillante / Mate</td><td class="px-6 py-3 text-center">Semi-brillante</td></tr>
+          <tr class="spec-row"><td class="px-6 py-3 font-medium">Precio referencia</td><td class="px-6 py-3 text-center font-bold">S/ 58+</td><td class="px-6 py-3 text-center font-bold">S/ 75+</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- APLICACIONES -->
+<section class="py-16 px-margin-desktop max-w-container-max mx-auto">
+  <h2 class="font-headline-lg text-on-surface mb-4">Aplicaciones Ideales del PETG</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-white rounded-xl p-5 border border-outline-variant text-center shadow-sm"><span class="material-symbols-outlined text-3xl text-tertiary mb-2 block">engineering</span><p class="font-medium text-sm">Piezas mecánicas</p></div>
+    <div class="bg-white rounded-xl p-5 border border-outline-variant text-center shadow-sm"><span class="material-symbols-outlined text-3xl text-tertiary mb-2 block">water_drop</span><p class="font-medium text-sm">Contenedores y tubos</p></div>
+    <div class="bg-white rounded-xl p-5 border border-outline-variant text-center shadow-sm"><span class="material-symbols-outlined text-3xl text-tertiary mb-2 block">wb_sunny</span><p class="font-medium text-sm">Piezas exteriores</p></div>
+    <div class="bg-white rounded-xl p-5 border border-outline-variant text-center shadow-sm"><span class="material-symbols-outlined text-3xl text-tertiary mb-2 block">medical_services</span><p class="font-medium text-sm">Uso médico no implantable</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-tertiary-container py-16 px-margin-desktop">
+  <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    <div>
+      <h2 class="font-headline-lg text-white mb-2">¿Necesitas PETG para tu proyecto?</h2>
+      <p class="text-white/70">Consulta con nuestros ingenieros de materiales para encontrar la variante ideal.</p>
+    </div>
+    <div class="flex gap-4 flex-wrap">
+      <a href="catalogo.html" class="px-8 py-4 bg-white text-tertiary font-bold rounded-lg hover:bg-white/90 transition-all active:scale-95 flex items-center gap-2">
+        <span class="material-symbols-outlined">shopping_bag</span>Ver PETG en Catálogo
+      </a>
+      <a href="contacto.html" class="px-8 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all active:scale-95">Consultar Asesor</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-secondary py-stack-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-6 col-span-2 md:col-span-1">
+<a class="font-headline-md font-black text-white flex items-center gap-2" href="index.html"><span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1;">precision_manufacturing</span>Pintofil</a>
+<p class="text-white opacity-60 text-sm">© 2024 Pintofil Advanced Materials. Certificación ISO 9001.</p>
+</div>
+<div class="flex flex-col gap-3"><h4 class="text-white font-bold border-b border-white/10 pb-2">Materiales</h4>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-pla.html">Guía PLA</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-petg.html">Guía PETG</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-resinas.html">Guía Resinas</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="material-accesorios.html">Accesorios</a>
+</div>
+<div class="flex flex-col gap-3"><h4 class="text-white font-bold border-b border-white/10 pb-2">Soporte</h4>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="politica-envio.html">Política de Envío</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="politica-privacidad.html">Privacidad</a>
+<a class="text-white opacity-60 hover:opacity-100 text-sm" href="contacto.html">Contacto</a>
+</div>
+<div class="flex flex-col gap-3 col-span-2 md:col-span-1"><h4 class="text-white font-bold border-b border-white/10 pb-2">Contacto</h4>
+<p class="text-white opacity-60 text-sm">tech@pintofil.pe</p>
+<p class="text-white opacity-60 text-sm">+51 (01) 421 9999</p>
+</div>
+</div>
+</footer>
+<script>
+  const btn=document.getElementById('mobile-menu-btn'),menu=document.getElementById('mobile-menu');let open=false;
+  if(btn&&menu){btn.addEventListener('click',()=>{open=!open;menu.classList.toggle('translate-x-full',!open);btn.innerHTML=open?'<span class="material-symbols-outlined text-2xl">close</span>':'<span class="material-symbols-outlined text-2xl">menu</span>';});}
+  window.addEventListener('scroll',()=>{const h=document.querySelector('header');if(window.scrollY>20){h.classList.add('shadow-md','h-16');h.classList.remove('h-20');}else{h.classList.remove('shadow-md','h-16');h.classList.add('h-20');}});
+</script>
+</body></html>

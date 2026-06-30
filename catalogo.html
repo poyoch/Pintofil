@@ -1,345 +1,264 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
-<meta name="description" content="Pintofil ofrece filamentos 3D de precisión de grado industrial. Materiales ISO 9001, PLA, PETG y resinas para ingenieros y diseñadores.">
+<meta name="description" content="Catálogo de filamentos 3D de Pintofil. PLA, PETG, TPU, ABS y más. Materiales de grado industrial certificados ISO 9001.">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Filamentos 3D de ingeniería de alta precisión | Pintofil</title>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Catálogo de Filamentos 3D | Pintofil</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="js/tailwind-config.js"></script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .active-dot {
-            box-shadow: 0 0 0 2px Blanco, 0 0 0 4px #ff6600;
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #8e7164;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #a33e00;
-        }
-    </style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+    .active-dot { box-shadow: 0 0 0 2px white, 0 0 0 4px #ff6600; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #8e7164; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a33e00; }
+    .product-card { transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.10); }
+    #cart-panel { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); }
+    #cart-overlay { transition: opacity 0.35s ease; }
+    input[type="range"] { accent-color: #a33e00; }
+    .color-btn.active-dot { box-shadow: 0 0 0 2px white, 0 0 0 4px #a33e00; }
+</style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
-<!-- Top Navigation Bar -->
-<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
-<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50">
-<div class="flex items-center gap-8">
+
+<!-- ============ HEADER ============ -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant transition-all duration-300 h-20">
+<nav class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50 transition-all duration-300 relative">
+<div class="flex items-center gap-8 h-full">
 <a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2" href="index.html">
-<span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
-                    Pintofil
-                </a>
-<div class="hidden md:flex items-center gap-8 ml-8 h-20">
+<span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>Pintofil</a>
+<div class="hidden md:flex items-center gap-8 ml-8 h-full">
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="index.html">Inicio</a>
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-primary border-primary" href="catalogo.html">Catálogo</a>
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="nosotros.html">Nosotros</a>
 <a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="contacto.html">Contacto</a>
 </div>
 </div>
-<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 lg:gap-6">
 <form action="catalogo.html" method="GET" class="hidden lg:flex items-center bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
 <span class="material-symbols-outlined text-secondary mr-2">search</span>
-<input name="q" class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Buscar..." type="search" required/>
-<button type="submit" class="hidden"></button>
+<input id="search-header" name="q" class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Buscar..." type="search"/>
 </form>
-<div class="flex items-center gap-4">
-<button class="text-secondary hover:text-primary transition-colors active:scale-95">
+<div class="flex items-center gap-2 md:gap-4">
+<button id="cart-btn" class="relative text-secondary hover:text-primary transition-colors active:scale-95">
 <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+<span id="cart-count" class="absolute -top-1 -right-1 bg-primary-container text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
 </button>
 <button class="text-secondary hover:text-primary transition-colors active:scale-95">
 <span class="material-symbols-outlined text-2xl">person</span>
 </button>
+<button id="mobile-menu-btn" class="md:hidden text-secondary hover:text-primary transition-colors active:scale-95 ml-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
 </div>
 </div>
 </nav>
+<div id="mobile-menu" class="fixed inset-0 top-20 bg-surface z-40 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto border-t border-outline-variant shadow-lg">
+<div class="flex flex-col p-6 gap-6">
+<form action="catalogo.html" method="GET" class="flex items-center bg-surface-container border border-outline-variant px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary mr-2">search</span>
+<input name="q" class="bg-transparent border-none focus:ring-0 text-body-md w-full" placeholder="Buscar..." type="search"/>
+</form>
+<div class="flex flex-col gap-4">
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="index.html">Inicio</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="catalogo.html">Catálogo</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="nosotros.html">Nosotros</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="contacto.html">Contacto</a>
+</div>
+</div>
+</div>
 </header>
-<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row gap-gutter">
-<!-- Sidebar Filtros -->
-<aside class="w-full md:w-[280px] shrink-0">
-<div class="bg-surface border border-outline-variant p-stack-md sticky top-24 h-fit">
-<div class="flex justify-between items-center mb-6">
-<h2 class="font-headline-md text-headline-md">Advanced Filtros</h2>
-<button class="text-primary font-label-tech hover:underline">Reset</button>
+
+<!-- ============ CART PANEL ============ -->
+<div id="cart-overlay" class="fixed inset-0 bg-black/40 z-[60] hidden opacity-0"></div>
+<div id="cart-panel" class="fixed top-0 right-0 h-full w-[360px] max-w-full bg-surface z-[70] shadow-2xl transform translate-x-full flex flex-col">
+  <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant">
+    <h2 class="font-headline-md text-headline-md">Carrito de Compras</h2>
+    <button id="cart-close" class="text-secondary hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-2xl">close</span>
+    </button>
+  </div>
+  <div id="cart-items" class="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-4 custom-scrollbar">
+    <p id="cart-empty" class="text-secondary text-center py-12">Tu carrito está vacío.<br/>¡Agrega productos para comenzar!</p>
+  </div>
+  <div class="px-6 py-5 border-t border-outline-variant bg-surface-container/50">
+    <div class="flex justify-between items-center mb-4">
+      <span class="font-label-tech text-secondary uppercase tracking-wide">Total</span>
+      <span id="cart-total" class="font-headline-md text-on-surface">S/ 0.00</span>
+    </div>
+    <button class="w-full py-4 bg-primary-container text-white font-bold rounded-lg hover:brightness-110 transition-all active:scale-95">Proceder al Pago</button>
+    <button id="cart-clear" class="w-full py-2 mt-2 text-secondary text-sm hover:text-primary transition-colors">Vaciar carrito</button>
+  </div>
 </div>
-<!-- Accordion: Material -->
-<details class="group mb-4 border-b border-surface-variant pb-4" open="">
-<summary class="flex justify-between items-center cursor-pointer list-none py-2">
-<span class="font-label-tech uppercase tracking-wider text-secondary">Material</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="mt-4 flex flex-col gap-2">
-<label class="flex items-center gap-3 cursor-pointer group/item">
-<input class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4" type="checkbox"/>
-<span class="font-body-md text-on-surface-variant group-hover/item:text-primary">PLA <span class="opacity-50">(64)</span></span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group/item">
-<input checked="" class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4" type="checkbox"/>
-<span class="font-body-md text-on-surface-variant group-hover/item:text-primary">PETG <span class="opacity-50">(42)</span></span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group/item">
-<input class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4" type="checkbox"/>
-<span class="font-body-md text-on-surface-variant group-hover/item:text-primary">TPU <span class="opacity-50">(18)</span></span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group/item">
-<input class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4" type="checkbox"/>
-<span class="font-body-md text-on-surface-variant group-hover/item:text-primary">ABS <span class="opacity-50">(30)</span></span>
-</label>
-</div>
-</details>
-<!-- Accordion: Color -->
-<details class="group mb-4 border-b border-surface-variant pb-4" open="">
-<summary class="flex justify-between items-center cursor-pointer list-none py-2">
-<span class="font-label-tech uppercase tracking-wider text-secondary">Color</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="mt-4 grid grid-cols-5 gap-3">
-<button class="w-8 h-8 rounded-full bg-black border border-outline active-dot" title="Negro"></button>
-<button class="w-8 h-8 rounded-full bg-white border border-outline" title="Blanco"></button>
-<button class="w-8 h-8 rounded-full bg-red-600 border border-outline" title="Red"></button>
-<button class="w-8 h-8 rounded-full bg-blue-600 border border-outline" title="Blue"></button>
-<button class="w-8 h-8 rounded-full bg-green-600 border border-outline" title="Green"></button>
-<button class="w-8 h-8 rounded-full bg-orange-500 border border-outline" title="Orange"></button>
-<button class="w-8 h-8 rounded-full bg-purple-600 border border-outline" title="Purple"></button>
-</div>
-</details>
-<!-- Accordion: Diámetro -->
-<details class="group mb-4 border-b border-surface-variant pb-4" open="">
-<summary class="flex justify-between items-center cursor-pointer list-none py-2">
-<span class="font-label-tech uppercase tracking-wider text-secondary">Diámetro</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="mt-4 flex flex-col gap-2">
-<label class="flex items-center gap-3 cursor-pointer">
-<input checked="" class="border-outline text-primary-container focus:ring-primary-container" name="Diámetro" type="radio"/>
-<span class="font-body-md">1.75mm <span class="opacity-50">(120)</span></span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer">
-<input class="border-outline text-primary-container focus:ring-primary-container" name="Diámetro" type="radio"/>
-<span class="font-body-md">2.85mm <span class="opacity-50">(56)</span></span>
-</label>
-</div>
-</details>
-<!-- Accordion: Price -->
-<details class="group" open="">
-<summary class="flex justify-between items-center cursor-pointer list-none py-2">
-<span class="font-label-tech uppercase tracking-wider text-secondary">Price Range</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="mt-4">
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" max="1200" min="65" type="range"/>
-<div class="flex justify-between mt-4 font-label-tech text-secondary">
-<span>S/ 65.00</span>
-<span>S/ 1200.00</span>
-</div>
-</div>
-</details>
-</div>
-</aside>
-<!-- Product Grid -->
-<section class="flex-1">
-<div class="flex justify-between items-center mb-8">
-<p class="font-body-md text-secondary">Showing <b>12</b> results for <b>PETG Filament</b></p>
-<div class="flex items-center gap-2">
-<span class="font-label-tech text-secondary">Ordenar por:</span>
-<select class="bg-transparent border-none font-body-md text-on-surface focus:ring-0 cursor-pointer">
-<option>Featured</option>
-<option>Precio: Menor a Mayor</option>
-<option>Precio: Mayor a Menor</option>
-<option>Newest Arrivals</option>
-</select>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Product Card 1 -->
-<article class="bg-surface-container-lowest border border-outline-variant hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] transition-all group overflow-hidden">
-<div class="aspect-square p-6 relative bg-white flex items-center justify-center overflow-hidden">
-<img class="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A premium 3d printer filament spool of professional-grade PLA Pro in sleek obsidian Negro, centered on a clean studio Blanco background. The product is captured with high-contrast, sharp lighting that highlights the precision wound fibers and technical texture of the spool. The aesthetic is industrial and sophisticated, reflecting the Pintofil brand's commitment to high-end engineering materials for professional prototyping." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6LEQhkWmepaCJOr5OYDfEgW6FiKjCra-dUK4LaK86PDbBWP1Zl98pvwWz4OYDOrrd-eo7FCPyrehYnsEBHOsGun2NOBRHZy6drglK8Qjl31FOQ4y7-ZH6pnpdWMhpsAe0mTKHXGIFBWk_la7wE99Lb1nlZkjWInyCSzTDoF4qInaY9zxEv3KHRVpK8M3JA-anxY-sQKf6vGxFfZQgFgKRlvLNO4UVU7E8k25nrXL2muuPMzSXXWthHsq67cGgTqRk76YjA1D8hPC5"/>
-<span class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter">PLA Pro</span>
-</div>
-<div class="p-5 border-t border-surface-variant">
-<h3 class="font-headline-md text-[20px] mb-1 group-hover:text-primary transition-colors">Creality PLA Pro Negro 1kg</h3>
-<p class="font-label-tech text-secondary text-xs mb-4">1.75mm | 1kg | ±0.02mm</p>
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label-tech text-green-600 text-xs font-bold uppercase block mb-1">In Stock</span>
-<p class="font-headline-md text-on-surface">S/ 65.00</p>
-</div>
-<button class="bg-primary-container text-white p-3 hover:bg-primary active:scale-95 transition-all flex items-center justify-center">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Product Card 2 -->
-<article class="bg-surface-container-lowest border border-outline-variant hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] transition-all group overflow-hidden">
-<div class="aspect-square p-6 relative bg-white flex items-center justify-center overflow-hidden">
-<img class="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A technical render of eSUN PETG 3D printing filament in pristine laboratory Blanco, perfectly coiled on a sturdy plastic spool. The image is shot from a three-quarter perspective under soft, diffused professional lighting, showcasing the material's semi-glossy finish. Set against a minimalist light gray environment, the image communicates industrial reliability and high-performance manufacturing standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEpT4PwQQK7UnxV4oLp95Z43zuSm5niGSHtTOFNqN_jtVgl1MmWKg_-G0O8bzD2K8hOji0vajd4_xM3_7kCHHlnl5d63u--pXtP3I9pK-8s6i-P4qDkEbZr2r1A4r8DXvWjXHPpbjhdFabbp2uTZiiC2UV6wx5C41NfH5fRz8e3ODxyWezYQoamXVj1rCc4Za7vZZoTLImANZORwR14AaODMtoD6zigrmM0xrPkV0KnI5-_4gMJykQZ74sPkVyTXsieBwCHJKcFA6R"/>
-<span class="absolute top-4 left-4 bg-tertiary-container text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter text-on-tertiary">PETG</span>
-</div>
-<div class="p-5 border-t border-surface-variant">
-<h3 class="font-headline-md text-[20px] mb-1 group-hover:text-primary transition-colors">eSUN PETG Blanco 1kg</h3>
-<p class="font-label-tech text-secondary text-xs mb-4">1.75mm | 1kg | Industrial</p>
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label-tech text-orange-600 text-xs font-bold uppercase block mb-1">Low Stock</span>
-<p class="font-headline-md text-on-surface">S/ 75.00</p>
-</div>
-<button class="bg-primary-container text-white p-3 hover:bg-primary active:scale-95 transition-all flex items-center justify-center">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Product Card 3 -->
-<article class="bg-surface-container-lowest border border-outline-variant hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] transition-all group overflow-hidden opacity-80">
-<div class="aspect-square p-6 relative bg-white flex items-center justify-center overflow-hidden grayscale">
-<img class="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A professional product shot of Polymaker PolyFlex TPU filament in a vibrant technical cobalt blue, wound on a transparent designer spool. The lighting is crisp and cool-toned, emphasizing the flexible material's high-quality surface finish and consistent Diámetro. The scene is clean, modern, and clinical, reflecting a high-end 3D printing laboratory environment for advanced product design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTUW3CdTJJ53uUauGeBIexr4h8TVZMokbiAxaMG3FIIvOhm_f3CK56ciGbQefoSSbhmLMzvUZE_jyFviNTrNrmWJ7ccb49n2sFFFjDJpIYSQiM0O71Cm4vHOhbhNFTA0XYeBy-R08yMzjGXvjKNSpwNfbGGOx1o5WxbRQnjBQj-ShUgoPoZr1igyuTeCEiJjSNKI8KjBP6LFM2zg8qCXCr7KLkaQ_jyquw-3yBVb7JRqadeG0b76bbescRjsAVQavwbPvdS2JLxDZU"/>
-<span class="absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-[2px] z-10">
-<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 font-label-tech uppercase tracking-widest text-[10px]">Sold Out</span>
-</span>
-<span class="absolute top-4 left-4 bg-on-surface text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter">Flexible TPU</span>
-</div>
-<div class="p-5 border-t border-surface-variant">
-<h3 class="font-headline-md text-[20px] mb-1 group-hover:text-primary transition-colors">Polymaker PolyFlex TPU Blue 0.5kg</h3>
-<p class="font-label-tech text-secondary text-xs mb-4">1.75mm | 0.5kg | 95A Hardness</p>
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label-tech text-secondary text-xs font-bold uppercase block mb-1">Coming Soon</span>
-<p class="font-headline-md text-on-surface">S/ 120.00</p>
-</div>
-<button class="bg-surface-container text-secondary p-3 cursor-not-allowed opacity-50 flex items-center justify-center" disabled="">
-<span class="material-symbols-outlined">shopping_cart_off</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Product Card 4 (Duplicate for Grid feel) -->
-<article class="bg-surface-container-lowest border border-outline-variant hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] transition-all group overflow-hidden">
-<div class="aspect-square p-6 relative bg-white flex items-center justify-center overflow-hidden">
-<img class="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A high-resolution photograph of a spool of premium copper-infused PLA filament, showing metallic glints and fine-grained texture. The spool is positioned centrally with soft shadows beneath it, set in a bright, contemporary 3D printing workshop atmosphere. The overall feel is one of technical precision and artistic potential for high-end additive manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn8kzwsSVle58ZQUKlwuKdC_tf0b2snGg-y6KP7euWIwPMeOo6d2e5ei2l74NMUI6MbzDrsx0NarpP_BxYf_eRtSO7iblU4R_lJqvLHedOKGINn1MC4oqkquUBKiN0lHKyt3CAZlubKm1rtRNcUgt6dPicf-IeD7FSMWHByFCrKd6Itc_o_QflgpcUVWaXfc6NT_VV1eXS-M_kvWby6DMnhRyp6a9hzHcSIYqZYrqOINFzNOKWqNYIzQGBGyOOCH51I-tTuzrWb9nb"/>
-<span class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter">PLA Copper</span>
-</div>
-<div class="p-5 border-t border-surface-variant">
-<h3 class="font-headline-md text-[20px] mb-1 group-hover:text-primary transition-colors">Pintofil Silk Copper PLA 1kg</h3>
-<p class="font-label-tech text-secondary text-xs mb-4">1.75mm | 1kg | High Detail</p>
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label-tech text-green-600 text-xs font-bold uppercase block mb-1">In Stock</span>
-<p class="font-headline-md text-on-surface">S/ 89.00</p>
-</div>
-<button class="bg-primary-container text-white p-3 hover:bg-primary active:scale-95 transition-all flex items-center justify-center">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Product Card 5 (Duplicate for Grid feel) -->
-<article class="bg-surface-container-lowest border border-outline-variant hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] transition-all group overflow-hidden">
-<div class="aspect-square p-6 relative bg-white flex items-center justify-center overflow-hidden">
-<img class="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500" data-alt="An industrial-grade carbon fiber reinforced PETG filament spool in a deep charcoal gray, meticulously wound for high-speed printing. The product photography uses side-lighting to reveal the fibrous texture and matte finish of the high-tech material. The background is a clean, neutral Blanco, typical of professional engineering product catalogs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSA04_60M_TK0mGsFX402D4JeEHNqkdQol2V60rnQ82ZiLDBYt52aE3mNa8JkrQjoYbue2wqrJeLq3afaRfGeCJ3Wg4F68q9_6zXVjw6hNVn2MlHEtn40JHjhPcHoWwWSee2arMfPXslmjlnYWOaTY0D0B8Y34PzFtwSlRL2xii9BwPVmwcVNdWzkTwUJX51cba6O4PMPOQm1C4BDRaQuXU4QWkqsr557wgwPalSyDbsZHl7jUgmeR_dzjj8ajL2ntupUBo0F4bwjo"/>
-<span class="absolute top-4 left-4 bg-on-surface text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter">PETG-CF</span>
-</div>
-<div class="p-5 border-t border-surface-variant">
-<h3 class="font-headline-md text-[20px] mb-1 group-hover:text-primary transition-colors">Pintofil PETG Carbon 1kg</h3>
-<p class="font-label-tech text-secondary text-xs mb-4">1.75mm | 1kg | Structural</p>
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label-tech text-green-600 text-xs font-bold uppercase block mb-1">In Stock</span>
-<p class="font-headline-md text-on-surface">S/ 115.00</p>
-</div>
-<button class="bg-primary-container text-white p-3 hover:bg-primary active:scale-95 transition-all flex items-center justify-center">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Product Card 6 (Duplicate for Grid feel) -->
-<article class="bg-surface-container-lowest border border-outline-variant hover:shadow-[0px_8px_24px_rgba(0,0,0,0.06)] transition-all group overflow-hidden">
-<div class="aspect-square p-6 relative bg-white flex items-center justify-center overflow-hidden">
-<img class="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A professional product image of a bright emerald green PLA filament spool, showcased under high-key studio lighting that makes the color pop against the Blanco background. The winding is perfect and the plastic sheen is captured vividly, representing top-tier quality for decorative and prototyping applications in 3D printing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfR-x1Z0KqYEiWtR1m6ullnNNF79xuflo8MwemF_1nNbWCGT_ISwu7Q9Yto1YUDQ8nqLowwDYZVAM33LCKqkc3ioz_fRWqJTj-6gDODLgkTUU80iNUTs-t-e0Xw-2G9h4Vcyg3PghKa-NGxBoW_YHbe_Mvj4eZ8pUvCF5oluyCxE0Bp5W67yY4D7ycOfa7nVR5L6AZ5DtdHKTDMgU9PGY23a4av-x82P3rylALx-BzBvg0L-utCYsYCz4fazS9RBRWlHFrCgCiAI-o"/>
-<span class="absolute top-4 left-4 bg-tertiary text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter">PLA Standard</span>
-</div>
-<div class="p-5 border-t border-surface-variant">
-<h3 class="font-headline-md text-[20px] mb-1 group-hover:text-primary transition-colors">Standard PLA Emerald Green 1kg</h3>
-<p class="font-label-tech text-secondary text-xs mb-4">1.75mm | 1kg | General Use</p>
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label-tech text-green-600 text-xs font-bold uppercase block mb-1">In Stock</span>
-<p class="font-headline-md text-on-surface">S/ 58.00</p>
-</div>
-<button class="bg-primary-container text-white p-3 hover:bg-primary active:scale-95 transition-all flex items-center justify-center">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</article>
-</div>
-<!-- Pagination -->
-<nav class="flex justify-center items-center h-20 mt-8" aria-label="Pagination">
-    <div class="flex gap-2">
+
+<!-- ============ MAIN ============ -->
+<main class="max-w-container-max mx-auto px-margin-desktop pt-28 pb-stack-lg flex flex-col md:flex-row gap-gutter">
+
+  <!-- ===== SIDEBAR FILTROS ===== -->
+  <aside class="w-full md:w-[280px] shrink-0">
+    <div class="bg-surface border border-outline-variant p-6 sticky top-24 h-fit rounded-xl shadow-sm">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="font-headline-md text-headline-md">Filtros</h2>
+        <button id="btn-reset" class="text-primary font-label-tech text-sm hover:underline">Limpiar</button>
+      </div>
+
+      <!-- Material -->
+      <details class="group mb-4 border-b border-surface-variant pb-4" open>
+        <summary class="flex justify-between items-center cursor-pointer list-none py-2">
+          <span class="font-label-tech uppercase tracking-wider text-secondary">Material</span>
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+        </summary>
+        <div class="mt-4 flex flex-col gap-2" id="filter-material">
+          <label class="flex items-center gap-3 cursor-pointer group/item">
+            <input class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4 filter-checkbox" type="checkbox" data-filter="material" value="PLA"/>
+            <span class="font-body-md text-on-surface-variant group-hover/item:text-primary">PLA <span class="opacity-50">(64)</span></span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer group/item">
+            <input class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4 filter-checkbox" type="checkbox" data-filter="material" value="PETG"/>
+            <span class="font-body-md text-on-surface-variant group-hover/item:text-primary">PETG <span class="opacity-50">(42)</span></span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer group/item">
+            <input class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4 filter-checkbox" type="checkbox" data-filter="material" value="TPU"/>
+            <span class="font-body-md text-on-surface-variant group-hover/item:text-primary">TPU <span class="opacity-50">(18)</span></span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer group/item">
+            <input class="rounded border-outline text-primary-container focus:ring-primary-container w-4 h-4 filter-checkbox" type="checkbox" data-filter="material" value="ABS"/>
+            <span class="font-body-md text-on-surface-variant group-hover/item:text-primary">ABS <span class="opacity-50">(30)</span></span>
+          </label>
+        </div>
+      </details>
+
+      <!-- Color -->
+      <details class="group mb-4 border-b border-surface-variant pb-4" open>
+        <summary class="flex justify-between items-center cursor-pointer list-none py-2">
+          <span class="font-label-tech uppercase tracking-wider text-secondary">Color</span>
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+        </summary>
+        <div class="mt-4 grid grid-cols-5 gap-3" id="filter-color">
+          <button class="color-btn w-8 h-8 rounded-full bg-black border border-outline transition-all" data-color="Negro" title="Negro"></button>
+          <button class="color-btn w-8 h-8 rounded-full bg-white border border-outline transition-all" data-color="Blanco" title="Blanco"></button>
+          <button class="color-btn w-8 h-8 rounded-full bg-red-600 border border-outline transition-all" data-color="Rojo" title="Rojo"></button>
+          <button class="color-btn w-8 h-8 rounded-full bg-blue-600 border border-outline transition-all" data-color="Azul" title="Azul"></button>
+          <button class="color-btn w-8 h-8 rounded-full bg-green-600 border border-outline transition-all" data-color="Verde" title="Verde"></button>
+          <button class="color-btn w-8 h-8 rounded-full bg-orange-500 border border-outline transition-all" data-color="Naranja" title="Naranja"></button>
+          <button class="color-btn w-8 h-8 rounded-full bg-purple-600 border border-outline transition-all" data-color="Morado" title="Morado"></button>
+          <button class="color-btn w-8 h-8 rounded-full border border-outline transition-all" data-color="Cobre" title="Cobre" style="background:linear-gradient(135deg,#b87333,#da8a67)"></button>
+        </div>
+        <p id="color-label" class="text-xs text-secondary mt-2 hidden"></p>
+      </details>
+
+      <!-- Diámetro -->
+      <details class="group mb-4 border-b border-surface-variant pb-4" open>
+        <summary class="flex justify-between items-center cursor-pointer list-none py-2">
+          <span class="font-label-tech uppercase tracking-wider text-secondary">Diámetro</span>
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+        </summary>
+        <div class="mt-4 flex flex-col gap-2">
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input class="border-outline text-primary-container focus:ring-primary-container filter-radio" name="diametro" type="radio" value="" checked/>
+            <span class="font-body-md">Todos</span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input class="border-outline text-primary-container focus:ring-primary-container filter-radio" name="diametro" type="radio" value="1.75"/>
+            <span class="font-body-md">1.75mm <span class="opacity-50">(120)</span></span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input class="border-outline text-primary-container focus:ring-primary-container filter-radio" name="diametro" type="radio" value="2.85"/>
+            <span class="font-body-md">2.85mm <span class="opacity-50">(56)</span></span>
+          </label>
+        </div>
+      </details>
+
+      <!-- Rango de precio -->
+      <details class="group" open>
+        <summary class="flex justify-between items-center cursor-pointer list-none py-2">
+          <span class="font-label-tech uppercase tracking-wider text-secondary">Rango de Precio</span>
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+        </summary>
+        <div class="mt-4">
+          <input id="price-range" class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer" max="1200" min="0" type="range" value="1200"/>
+          <div class="flex justify-between mt-3 font-label-tech text-secondary text-xs">
+            <span>S/ 0</span>
+            <span id="price-label" class="text-primary font-bold">S/ 1200</span>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </aside>
+
+  <!-- ===== PRODUCT GRID ===== -->
+  <section class="flex-1">
+    <div class="flex justify-between items-center mb-8 flex-wrap gap-4">
+      <p class="font-body-md text-secondary">Mostrando <b id="result-count">6</b> productos</p>
+      <div class="flex items-center gap-2">
+        <span class="font-label-tech text-secondary">Ordenar por:</span>
+        <select id="sort-select" class="bg-transparent border border-outline-variant rounded-lg px-3 py-2 font-body-md text-on-surface focus:ring-primary cursor-pointer text-sm">
+          <option value="featured">Destacados</option>
+          <option value="price-asc">Precio: Menor a Mayor</option>
+          <option value="price-desc">Precio: Mayor a Menor</option>
+          <option value="newest">Más Recientes</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Cards rendered by JS -->
+    </div>
+
+    <p id="no-results" class="hidden text-center text-secondary py-20 text-lg">No se encontraron productos con estos filtros.</p>
+
+    <!-- Pagination -->
+    <nav class="flex justify-center items-center h-20 mt-8" aria-label="Paginación">
+      <div class="flex gap-2">
         <button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-secondary hover:bg-surface-variant transition-colors" disabled>
-            <span class="material-symbols-outlined">chevron_left</span>
+          <span class="material-symbols-outlined">chevron_left</span>
         </button>
         <button class="w-10 h-10 flex items-center justify-center rounded bg-primary text-white font-bold transition-colors">1</button>
         <button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-secondary hover:bg-surface-variant transition-colors">2</button>
         <button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-secondary hover:bg-surface-variant transition-colors">3</button>
         <button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-secondary hover:bg-surface-variant transition-colors">
-            <span class="material-symbols-outlined">chevron_right</span>
+          <span class="material-symbols-outlined">chevron_right</span>
         </button>
-    </div>
-</nav>
-</section>
+      </div>
+    </nav>
+  </section>
 </main>
-<!-- Professional Footer -->
+
+<!-- ============ FOOTER ============ -->
 <footer class="bg-secondary dark:bg-inverse-surface py-stack-lg">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
-<!-- Brand & Contacto -->
 <div class="flex flex-col gap-6 col-span-2 md:col-span-1">
 <a class="font-headline-md text-headline-md font-black text-white flex items-center gap-2" href="index.html">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">precision_manufacturing</span>
-                    Pintofil
-                </a>
-<p class="text-white opacity-60 font-body-md leading-relaxed">
-                    © 2024 Pintofil Advanced Materials. <br/>Diseñados para Precisión. Fabricación certificada ISO para confiabilidad industrial.
-                </p>
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">precision_manufacturing</span>Pintofil</a>
+<p class="text-white opacity-60 font-body-md leading-relaxed">© 2024 Pintofil Advanced Materials. <br/>Diseñados para Precisión. Fabricación certificada ISO.</p>
 <div class="flex gap-4 mt-2">
 <a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="https://pintofil.pe" aria-label="Website"><span class="material-symbols-outlined" aria-hidden="true">language</span></a>
 <a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="mailto:tech@pintofil.pe" aria-label="Email"><span class="material-symbols-outlined" aria-hidden="true">alternate_email</span></a>
 </div>
 </div>
-<!-- Guías de Materiales -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Guías de Materiales</h4>
 <div class="flex flex-col gap-3">
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Ajustes de PLA</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Datos Químicos PETG</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Fichas de Seguridad de Resina</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="catalogo.html">Guía de Almacenamiento</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="ajustes-pla.html">Ajustes de PLA</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="datos-petg.html">Datos Químicos PETG</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="seguridad-resina.html">Fichas de Seguridad</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="guia-almacenamiento.html">Guía de Almacenamiento</a>
 </div>
 </div>
-<!-- Soporte Técnico -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Soporte Técnico</h4>
 <div class="flex flex-col gap-3">
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Envío</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Privacidad</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="nosotros.html">Política de Reembolso</a>
-<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="contacto.html">Consulta de Venta al por Mayor</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="politica-envio.html">Política de Envío</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="politica-privacidad.html">Política de Privacidad</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="politica-reembolso.html">Política de Reembolso</a>
+<a class="text-white opacity-60 hover:text-primary-container hover:opacity-100 transition-opacity font-body-md" href="venta-mayor.html">Venta al por Mayor</a>
 </div>
 </div>
-<!-- Engineering Resources -->
 <div class="flex flex-col gap-4 col-span-2 md:col-span-1">
 <h4 class="text-white font-headline-md text-headline-md border-b border-white/10 pb-2">Recursos</h4>
 <div class="flex flex-col gap-4">
@@ -358,39 +277,326 @@
 <div class="px-margin-desktop max-w-container-max mx-auto flex justify-between items-center text-white opacity-40 text-sm flex-col md:flex-row gap-4">
 <span>Polímeros Certificados de Alto Rendimiento</span>
 <div class="flex gap-6">
-<a class="hover:underline" href="nosotros.html">Términos de Servicio</a>
-<a class="hover:underline" href="nosotros.html">Cumplimiento de Seguridad</a>
+<a class="hover:underline" href="terminos-servicio.html">Términos de Servicio</a>
+<a class="hover:underline" href="cumplimiento-seguridad.html">Cumplimiento de Seguridad</a>
 </div>
 </div>
 </div>
 </footer>
-<!-- Back to Top Button -->
-<button class="fixed bottom-8 right-8 bg-on-surface text-surface w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary-container transition-all z-40 active:scale-90" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+
+<!-- Back to Top -->
+<button class="fixed bottom-8 right-8 bg-on-surface text-surface w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary-container transition-all z-40 active:scale-90" onclick="window.scrollTo({top:0,behavior:'smooth'})">
 <span class="material-symbols-outlined">arrow_upward</span>
 </button>
+
 <script>
-        // Micro-interactions and interactive states
-        document.querySelectorAll('article').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Potential for adding dynamic shadows or subtle movements
-            });
-        });
+// ============================
+// PRODUCTS DATA
+// ============================
+const PRODUCTS = [
+  { id:1, name:"Creality PLA Pro Negro 1kg", tag:"PLA Pro", material:"PLA", color:"Negro", colorHex:"#111", diameter:"1.75", weight:"1kg", detail:"±0.02mm", price:65, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuD6LEQhkWmepaCJOr5OYDfEgW6FiKjCra-dUK4LaK86PDbBWP1Zl98pvwWz4OYDOrrd-eo7FCPyrehYnsEBHOsGun2NOBRHZy6drglK8Qjl31FOQ4y7-ZH6pnpdWMhpsAe0mTKHXGIFBWk_la7wE99Lb1nlZkjWInyCSzTDoF4qInaY9zxEv3KHRVpK8M3JA-anxY-sQKf6vGxFfZQgFgKRlvLNO4UVU7E8k25nrXL2muuPMzSXXWthHsq67cGgTqRk76YjA1D8hPC5", tagBg:"bg-primary-container" },
+  { id:2, name:"eSUN PETG Blanco 1kg", tag:"PETG", material:"PETG", color:"Blanco", colorHex:"#f5f5f5", diameter:"1.75", weight:"1kg", detail:"Industrial", price:75, stock:"stock-limitado", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuBEpT4PwQQK7UnxV4oLp95Z43zuSm5niGSHtTOFNqN_jtVgl1MmWKg_-G0O8bzD2K8hOji0vajd4_xM3_7kCHHlnl5d63u--pXtP3I9pK-8s6i-P4qDkEbZr2r1A4r8DXvWjXHPpbjhdFabbp2uTZiiC2UV6wx5C41NfH5fRz8e3ODxyWezYQoamXVj1rCc4Za7vZZoTLImANZORwR14AaODMtoD6zigrmM0xrPkV0KnI5-_4gMJykQZ74sPkVyTXsieBwCHJKcFA6R", tagBg:"bg-tertiary-container" },
+  { id:3, name:"Polymaker PolyFlex TPU Azul 0.5kg", tag:"TPU Flexible", material:"TPU", color:"Azul", colorHex:"#2563eb", diameter:"1.75", weight:"0.5kg", detail:"Dureza 95A", price:120, stock:"proximo", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuBTUW3CdTJJ53uUauGeBIexr4h8TVZMokbiAxaMG3FIIvOhm_f3CK56ciGbQefoSSbhmLMzvUZE_jyFviNTrNrmWJ7ccb49n2sFFFjDJpIYSQiM0O71Cm4vHOhbhNFTA0XYeBy-R08yMzjGXvjKNSpwNfbGGOx1o5WxbRQnjBQj-ShUgoPoZr1igyuTeCEiJjSNKI8KjBP6LFM2zg8qCXCr7KLkaQ_jyquw-3yBVb7JRqadeG0b76bbescRjsAVQavwbPvdS2JLxDZU", tagBg:"bg-on-surface" },
+  { id:4, name:"Pintofil Silk Cobre PLA 1kg", tag:"PLA Cobre", material:"PLA", color:"Cobre", colorHex:"#b87333", diameter:"1.75", weight:"1kg", detail:"Alto Detalle", price:89, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuAn8kzwsSVle58ZQUKlwuKdC_tf0b2snGg-y6KP7euWIwPMeOo6d2e5ei2l74NMUI6MbzDrsx0NarpP_BxYf_eRtSO7iblU4R_lJqvLHedOKGINn1MC4oqkquUBKiN0lHKyt3CAZlubKm1rtRNcUgt6dPicf-IeD7FSMWHByFCrKd6Itc_o_QflgpcUVWaXfc6NT_VV1eXS-M_kvWby6DMnhRyp6a9hzHcSIYqZYrqOINFzNOKWqNYIzQGBGyOOCH51I-tTuzrWb9nb", tagBg:"bg-primary-container" },
+  { id:5, name:"Pintofil PETG Carbono 1kg", tag:"PETG-CF", material:"PETG", color:"Negro", colorHex:"#333", diameter:"1.75", weight:"1kg", detail:"Estructural", price:115, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuDSA04_60M_TK0mGsFX402D4JeEHNqkdQol2V60rnQ82ZiLDBYt52aE3mNa8JkrQjoYbue2wqrJeLq3afaRfGeCJ3Wg4F68q9_6zXVjw6hNVn2MlHEtn40JHjhPcHoWwWSee2arMfPXslmjlnYWOaTY0D0B8Y34PzFtwSlRL2xii9BwPVmwcVNdWzkTwUJX51cba6O4PMPOQm1C4BDRaQuXU4QWkqsr557wgwPalSyDbsZHl7jUgmeR_dzjj8ajL2ntupUBo0F4bwjo", tagBg:"bg-on-surface" },
+  { id:6, name:"PLA Estándar Verde Esmeralda 1kg", tag:"PLA Estándar", material:"PLA", color:"Verde", colorHex:"#16a34a", diameter:"1.75", weight:"1kg", detail:"Uso General", price:58, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuDfR-x1Z0KqYEiWtR1m6ullnNNF79xuflo8MwemF_1nNbWCGT_ISwu7Q9Yto1YUDQ8nqLowwDYZVAM33LCKqkc3ioz_fRWqJTj-6gDODLgkTUU80iNUTs-t-e0Xw-2G9h4Vcyg3PghKa-NGxBoW_YHbe_Mvj4eZ8pUvCF5oluyCxE0Bp5W67yY4D7ycOfa7nVR5L6AZ5DtdHKTDMgU9PGY23a4av-x82P3rylALx-BzBvg0L-utCYsYCz4fazS9RBRWlHFrCgCiAI-o", tagBg:"bg-tertiary" },
+  { id:7, name:"Pintofil ABS Negro 1kg", tag:"ABS", material:"ABS", color:"Negro", colorHex:"#222", diameter:"1.75", weight:"1kg", detail:"Alta Resistencia", price:72, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuD6LEQhkWmepaCJOr5OYDfEgW6FiKjCra-dUK4LaK86PDbBWP1Zl98pvwWz4OYDOrrd-eo7FCPyrehYnsEBHOsGun2NOBRHZy6drglK8Qjl31FOQ4y7-ZH6pnpdWMhpsAe0mTKHXGIFBWk_la7wE99Lb1nlZkjWInyCSzTDoF4qInaY9zxEv3KHRVpK8M3JA-anxY-sQKf6vGxFfZQgFgKRlvLNO4UVU7E8k25nrXL2muuPMzSXXWthHsq67cGgTqRk76YjA1D8hPC5", tagBg:"bg-on-surface" },
+  { id:8, name:"PLA Pro Rojo 1kg", tag:"PLA Pro", material:"PLA", color:"Rojo", colorHex:"#dc2626", diameter:"2.85", weight:"1kg", detail:"±0.02mm", price:68, stock:"stock-limitado", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuD6LEQhkWmepaCJOr5OYDfEgW6FiKjCra-dUK4LaK86PDbBWP1Zl98pvwWz4OYDOrrd-eo7FCPyrehYnsEBHOsGun2NOBRHZy6drglK8Qjl31FOQ4y7-ZH6pnpdWMhpsAe0mTKHXGIFBWk_la7wE99Lb1nlZkjWInyCSzTDoF4qInaY9zxEv3KHRVpK8M3JA-anxY-sQKf6vGxFfZQgFgKRlvLNO4UVU7E8k25nrXL2muuPMzSXXWthHsq67cGgTqRk76YjA1D8hPC5", tagBg:"bg-primary-container" },
+  { id:9, name:"PETG Morado 1kg", tag:"PETG", material:"PETG", color:"Morado", colorHex:"#7c3aed", diameter:"1.75", weight:"1kg", detail:"Resistente UV", price:82, stock:"proximo", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuBEpT4PwQQK7UnxV4oLp95Z43zuSm5niGSHtTOFNqN_jtVgl1MmWKg_-G0O8bzD2K8hOji0vajd4_xM3_7kCHHlnl5d63u--pXtP3I9pK-8s6i-P4qDkEbZr2r1A4r8DXvWjXHPpbjhdFabbp2uTZiiC2UV6wx5C41NfH5fRz8e3ODxyWezYQoamXVj1rCc4Za7vZZoTLImANZORwR14AaODMtoD6zigrmM0xrPkV0KnI5-_4gMJykQZ74sPkVyTXsieBwCHJKcFA6R", tagBg:"bg-tertiary-container" },
+];
 
-        // Search Bar focus effect
-        const searchInput = document.querySelector('input[type="text"]');
-        searchInput.addEventListener('focus', () => {
-            searchInput.parentElement.classList.add('ring-2', 'ring-primary-container/20');
-        });
-        searchInput.addEventListener('blur', () => {
-            searchInput.parentElement.classList.remove('ring-2', 'ring-primary-container/20');
-        });
+// ============================
+// CART STATE
+// ============================
+let cart = JSON.parse(localStorage.getItem('pintofil-cart') || '[]');
 
-        // Color dot selection toggle
-        document.querySelectorAll('.rounded-full[title]').forEach(dot => {
-            dot.addEventListener('click', () => {
-                document.querySelectorAll('.active-dot').forEach(active => active.classList.remove('active-dot'));
-                dot.classList.add('active-dot');
-            });
-        });
-    </script>
-</body></html>
+function saveCart() { localStorage.setItem('pintofil-cart', JSON.stringify(cart)); }
+
+function addToCart(productId) {
+  const p = PRODUCTS.find(x => x.id === productId);
+  if (!p) return;
+  const existing = cart.find(x => x.id === productId);
+  if (existing) { existing.qty++; }
+  else { cart.push({ id: p.id, name: p.name, price: p.price, qty: 1, img: p.img }); }
+  saveCart();
+  updateCartUI();
+  openCart();
+  showAddedFeedback(productId);
+}
+
+function removeFromCart(productId) {
+  cart = cart.filter(x => x.id !== productId);
+  saveCart();
+  updateCartUI();
+}
+
+function clearCart() {
+  cart = [];
+  saveCart();
+  updateCartUI();
+}
+
+function updateCartUI() {
+  const total = cart.reduce((sum, x) => sum + x.price * x.qty, 0);
+  const count = cart.reduce((sum, x) => sum + x.qty, 0);
+  document.getElementById('cart-total').textContent = `S/ ${total.toFixed(2)}`;
+  const countEl = document.getElementById('cart-count');
+  if (count > 0) { countEl.textContent = count; countEl.classList.remove('hidden'); }
+  else { countEl.classList.add('hidden'); }
+
+  const itemsEl = document.getElementById('cart-items');
+  const emptyEl = document.getElementById('cart-empty');
+  if (cart.length === 0) {
+    emptyEl.classList.remove('hidden');
+    itemsEl.querySelectorAll('.cart-item').forEach(el => el.remove());
+    return;
+  }
+  emptyEl.classList.add('hidden');
+  itemsEl.querySelectorAll('.cart-item').forEach(el => el.remove());
+  cart.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'cart-item flex gap-3 items-start border-b border-outline-variant pb-4';
+    div.innerHTML = `
+      <img src="${item.img}" class="w-16 h-16 object-contain rounded border border-outline-variant bg-white shrink-0" alt="${item.name}"/>
+      <div class="flex-1 min-w-0">
+        <p class="font-body-md font-semibold text-on-surface leading-tight mb-1 truncate">${item.name}</p>
+        <p class="text-secondary text-sm">Cant: ${item.qty}</p>
+        <p class="font-bold text-primary-container">S/ ${(item.price * item.qty).toFixed(2)}</p>
+      </div>
+      <button class="text-secondary hover:text-red-500 transition-colors shrink-0" onclick="removeFromCart(${item.id})">
+        <span class="material-symbols-outlined text-lg">delete</span>
+      </button>`;
+    itemsEl.appendChild(div);
+  });
+}
+
+function showAddedFeedback(productId) {
+  const btn = document.querySelector(`[data-cart-id="${productId}"]`);
+  if (!btn) return;
+  const orig = btn.innerHTML;
+  btn.innerHTML = '<span class="material-symbols-outlined">check</span>';
+  btn.classList.add('bg-green-600');
+  btn.classList.remove('bg-primary-container');
+  setTimeout(() => {
+    btn.innerHTML = orig;
+    btn.classList.remove('bg-green-600');
+    btn.classList.add('bg-primary-container');
+  }, 1200);
+}
+
+function openCart() {
+  document.getElementById('cart-panel').classList.remove('translate-x-full');
+  document.getElementById('cart-overlay').classList.remove('hidden');
+  setTimeout(() => document.getElementById('cart-overlay').classList.remove('opacity-0'), 10);
+}
+
+function closeCart() {
+  document.getElementById('cart-overlay').classList.add('opacity-0');
+  document.getElementById('cart-panel').classList.add('translate-x-full');
+  setTimeout(() => document.getElementById('cart-overlay').classList.add('hidden'), 350);
+}
+
+// ============================
+// STOCK BADGE HELPER
+// ============================
+function stockBadge(stock) {
+  if (stock === 'en-stock')      return { label: 'En Stock',     cls: 'text-green-600' };
+  if (stock === 'stock-limitado') return { label: 'Stock Limitado', cls: 'text-orange-500' };
+  if (stock === 'proximo')        return { label: 'Próximamente',  cls: 'text-secondary' };
+  return { label: 'Agotado', cls: 'text-secondary' };
+}
+
+// ============================
+// RENDER PRODUCTS
+// ============================
+function renderProducts(list) {
+  const grid = document.getElementById('product-grid');
+  const noRes = document.getElementById('no-results');
+  grid.innerHTML = '';
+  document.getElementById('result-count').textContent = list.length;
+
+  if (list.length === 0) { noRes.classList.remove('hidden'); return; }
+  noRes.classList.add('hidden');
+
+  list.forEach(p => {
+    const badge = stockBadge(p.stock);
+    const available = p.stock === 'en-stock' || p.stock === 'stock-limitado';
+
+    const article = document.createElement('article');
+    article.className = 'product-card bg-surface-container-lowest border border-outline-variant group overflow-hidden rounded-xl cursor-pointer flex flex-col';
+    article.setAttribute('data-id', p.id);
+
+    article.innerHTML = `
+      <a href="producto.html?id=${p.id}" class="block aspect-square p-6 relative bg-white flex items-center justify-center overflow-hidden rounded-t-xl">
+        <img class="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500" src="${p.img}" alt="${p.name}"/>
+        <span class="absolute top-4 left-4 ${p.tagBg} text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter rounded">${p.tag}</span>
+        ${!available ? `<span class="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-[2px] z-10 rounded-t-xl">
+          <span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 font-label-tech uppercase tracking-widest text-[10px] rounded">${p.stock === 'proximo' ? 'Próximamente' : 'Agotado'}</span>
+        </span>` : ''}
+      </a>
+      <div class="p-5 border-t border-surface-variant flex flex-col flex-1">
+        <a href="producto.html?id=${p.id}" class="block group-hover:text-primary transition-colors">
+          <h3 class="font-headline-md text-[18px] mb-1 leading-tight">${p.name}</h3>
+        </a>
+        <p class="font-label-tech text-secondary text-xs mb-4">${p.diameter}mm | ${p.weight} | ${p.detail}</p>
+        <div class="flex justify-between items-end mt-auto gap-2">
+          <div class="min-w-0">
+            <span class="font-label-tech ${badge.cls} text-xs font-bold uppercase block mb-1">${badge.label}</span>
+            <p class="font-headline-md text-on-surface text-lg">S/ ${p.price.toFixed(2)}</p>
+          </div>
+          <button
+            data-cart-id="${p.id}"
+            class="shrink-0 ${available ? 'bg-primary-container hover:bg-primary active:scale-95 cursor-pointer' : 'bg-surface-container opacity-50 cursor-not-allowed'} text-white p-3 rounded-lg transition-all flex items-center justify-center"
+            ${available ? `onclick="event.preventDefault();event.stopPropagation();addToCart(${p.id})"` : 'disabled'}>
+            <span class="material-symbols-outlined">${available ? 'add_shopping_cart' : 'shopping_cart_off'}</span>
+          </button>
+        </div>
+      </div>`;
+
+    grid.appendChild(article);
+  });
+}
+
+// ============================
+// FILTERING
+// ============================
+let activeColor = null;
+let activeFilters = { materials: [], color: null, diameter: '', price: 1200, search: '' };
+
+function applyFilters() {
+  let list = [...PRODUCTS];
+
+  if (activeFilters.materials.length > 0) {
+    list = list.filter(p => activeFilters.materials.includes(p.material));
+  }
+  if (activeFilters.color) {
+    list = list.filter(p => p.color === activeFilters.color);
+  }
+  if (activeFilters.diameter) {
+    list = list.filter(p => p.diameter === activeFilters.diameter);
+  }
+  list = list.filter(p => p.price <= activeFilters.price);
+
+  if (activeFilters.search) {
+    const q = activeFilters.search.toLowerCase();
+    list = list.filter(p => p.name.toLowerCase().includes(q) || p.material.toLowerCase().includes(q) || p.tag.toLowerCase().includes(q));
+  }
+
+  const sort = document.getElementById('sort-select').value;
+  if (sort === 'price-asc') list.sort((a,b) => a.price - b.price);
+  else if (sort === 'price-desc') list.sort((a,b) => b.price - a.price);
+  else if (sort === 'newest') list.sort((a,b) => b.id - a.id);
+
+  renderProducts(list);
+}
+
+// ============================
+// EVENT LISTENERS
+// ============================
+document.addEventListener('DOMContentLoaded', () => {
+  // Initial render
+  renderProducts(PRODUCTS);
+  updateCartUI();
+
+  // Cart open/close
+  document.getElementById('cart-btn').addEventListener('click', openCart);
+  document.getElementById('cart-close').addEventListener('click', closeCart);
+  document.getElementById('cart-overlay').addEventListener('click', closeCart);
+  document.getElementById('cart-clear').addEventListener('click', () => { clearCart(); });
+
+  // Mobile menu
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let isMenuOpen = false;
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">close</span>';
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+        mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">menu</span>';
+      }
+    });
+  }
+
+  // Material checkboxes
+  document.querySelectorAll('.filter-checkbox').forEach(cb => {
+    cb.addEventListener('change', () => {
+      activeFilters.materials = [...document.querySelectorAll('.filter-checkbox:checked')].map(x => x.value);
+      applyFilters();
+    });
+  });
+
+  // Color buttons
+  document.querySelectorAll('.color-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const color = btn.dataset.color;
+      if (activeColor === color) {
+        activeColor = null;
+        activeFilters.color = null;
+        btn.classList.remove('active-dot');
+        document.getElementById('color-label').classList.add('hidden');
+      } else {
+        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active-dot'));
+        activeColor = color;
+        activeFilters.color = color;
+        btn.classList.add('active-dot');
+        document.getElementById('color-label').textContent = `Color: ${color}`;
+        document.getElementById('color-label').classList.remove('hidden');
+      }
+      applyFilters();
+    });
+  });
+
+  // Diameter radio
+  document.querySelectorAll('.filter-radio').forEach(radio => {
+    radio.addEventListener('change', () => {
+      activeFilters.diameter = radio.value;
+      applyFilters();
+    });
+  });
+
+  // Price range
+  const priceRange = document.getElementById('price-range');
+  priceRange.addEventListener('input', () => {
+    activeFilters.price = parseInt(priceRange.value);
+    document.getElementById('price-label').textContent = `S/ ${priceRange.value}`;
+    applyFilters();
+  });
+
+  // Sort
+  document.getElementById('sort-select').addEventListener('change', applyFilters);
+
+  // Reset filters
+  document.getElementById('btn-reset').addEventListener('click', () => {
+    document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
+    document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active-dot'));
+    document.querySelectorAll('.filter-radio')[0].checked = true;
+    priceRange.value = 1200;
+    document.getElementById('price-label').textContent = 'S/ 1200';
+    document.getElementById('color-label').classList.add('hidden');
+    activeColor = null;
+    activeFilters = { materials: [], color: null, diameter: '', price: 1200, search: '' };
+    applyFilters();
+  });
+
+  // Search from URL param
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('q')) {
+    activeFilters.search = params.get('q');
+    const headerSearch = document.getElementById('search-header');
+    if (headerSearch) headerSearch.value = params.get('q');
+  }
+
+  // Scroll header shrink
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 20) { header.classList.add('shadow-md','h-16'); header.classList.remove('h-20'); }
+    else { header.classList.remove('shadow-md','h-16'); header.classList.add('h-20'); }
+  });
+});
+</script>
+</body>
+</html>

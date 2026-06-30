@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="description" content="Detalle de producto Pintofil. Filamentos 3D de grado industrial.">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title id="page-title">Producto | Pintofil</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tailwind-config.js"></script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+    #cart-panel { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); }
+    #cart-overlay { transition: opacity 0.35s ease; }
+    .rec-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .rec-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .tab-btn.active { border-color: #a33e00; color: #a33e00; }
+    input[type=number]::-webkit-inner-spin-button { opacity: 1; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- ============ HEADER ============ -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant transition-all duration-300 h-20">
+<nav class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto bg-surface w-full z-50 transition-all duration-300 relative">
+<div class="flex items-center gap-8 h-full">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2" href="index.html">
+<span class="text-primary-container material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>Pintofil</a>
+<div class="hidden md:flex items-center gap-8 ml-8 h-full">
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="index.html">Inicio</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-primary border-primary" href="catalogo.html">Catálogo</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="nosotros.html">Nosotros</a>
+<a class="font-medium hover:text-primary transition-colors duration-200 h-full flex items-center border-b-2 text-secondary border-transparent" href="contacto.html">Contacto</a>
+</div>
+</div>
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="flex items-center gap-2 md:gap-4">
+<button id="cart-btn" class="relative text-secondary hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+<span id="cart-count" class="absolute -top-1 -right-1 bg-primary-container text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+</button>
+<button class="text-secondary hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+<button id="mobile-menu-btn" class="md:hidden text-secondary hover:text-primary transition-colors active:scale-95 ml-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<div id="mobile-menu" class="fixed inset-0 top-20 bg-surface z-40 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto border-t border-outline-variant shadow-lg">
+<div class="flex flex-col p-6 gap-6">
+<div class="flex flex-col gap-4">
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="index.html">Inicio</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="catalogo.html">Catálogo</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="nosotros.html">Nosotros</a>
+<a class="font-medium text-lg text-on-surface hover:text-primary transition-colors py-2 border-b border-outline-variant" href="contacto.html">Contacto</a>
+</div>
+</div>
+</div>
+</header>
+
+<!-- ============ CART PANEL ============ -->
+<div id="cart-overlay" class="fixed inset-0 bg-black/40 z-[60] hidden opacity-0"></div>
+<div id="cart-panel" class="fixed top-0 right-0 h-full w-[360px] max-w-full bg-surface z-[70] shadow-2xl transform translate-x-full flex flex-col">
+  <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant">
+    <h2 class="font-headline-md text-headline-md">Carrito de Compras</h2>
+    <button id="cart-close" class="text-secondary hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-2xl">close</span>
+    </button>
+  </div>
+  <div id="cart-items" class="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-4">
+    <p id="cart-empty" class="text-secondary text-center py-12">Tu carrito está vacío.<br/>¡Agrega productos para comenzar!</p>
+  </div>
+  <div class="px-6 py-5 border-t border-outline-variant bg-surface-container/50">
+    <div class="flex justify-between items-center mb-4">
+      <span class="font-label-tech text-secondary uppercase tracking-wide">Total</span>
+      <span id="cart-total" class="font-headline-md text-on-surface">S/ 0.00</span>
+    </div>
+    <button class="w-full py-4 bg-primary-container text-white font-bold rounded-lg hover:brightness-110 transition-all active:scale-95">Proceder al Pago</button>
+    <button id="cart-clear" class="w-full py-2 mt-2 text-secondary text-sm hover:text-primary transition-colors">Vaciar carrito</button>
+  </div>
+</div>
+
+<!-- ============ MAIN ============ -->
+<main class="max-w-container-max mx-auto px-margin-desktop pt-28 pb-stack-lg">
+
+  <!-- Breadcrumb -->
+  <nav class="flex items-center gap-2 text-sm text-secondary mb-8">
+    <a href="index.html" class="hover:text-primary transition-colors">Inicio</a>
+    <span class="material-symbols-outlined text-base">chevron_right</span>
+    <a href="catalogo.html" class="hover:text-primary transition-colors">Catálogo</a>
+    <span class="material-symbols-outlined text-base">chevron_right</span>
+    <span id="breadcrumb-name" class="text-on-surface font-medium truncate max-w-[200px]">...</span>
+  </nav>
+
+  <!-- Prev / Next Navigation -->
+  <div class="flex justify-between items-center mb-8">
+    <a id="btn-prev" href="#" class="flex items-center gap-2 text-secondary hover:text-primary transition-colors text-sm font-medium">
+      <span class="material-symbols-outlined">arrow_back</span>
+      <span>Producto anterior</span>
+    </a>
+    <a href="catalogo.html" class="text-secondary hover:text-primary transition-colors text-sm font-medium">Ver todos</a>
+    <a id="btn-next" href="#" class="flex items-center gap-2 text-secondary hover:text-primary transition-colors text-sm font-medium">
+      <span>Siguiente producto</span>
+      <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+  </div>
+
+  <!-- Product Detail -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+
+    <!-- Image -->
+    <div class="bg-white rounded-2xl border border-outline-variant flex items-center justify-center p-12 min-h-[400px] relative overflow-hidden">
+      <img id="product-img" src="" alt="" class="max-w-[280px] max-h-[280px] object-contain"/>
+      <span id="product-tag" class="absolute top-4 left-4 text-white text-[10px] font-black px-3 py-1 uppercase tracking-tighter rounded-lg"></span>
+    </div>
+
+    <!-- Info -->
+    <div class="flex flex-col justify-center">
+      <div id="stock-badge" class="font-label-tech text-xs font-bold uppercase mb-3"></div>
+      <h1 id="product-name" class="font-display-md text-on-surface mb-3 leading-tight"></h1>
+      <p id="product-specs" class="font-label-tech text-secondary text-sm mb-6"></p>
+
+      <!-- Specs grid -->
+      <div id="specs-grid" class="grid grid-cols-2 gap-4 mb-8"></div>
+
+      <div class="flex items-center gap-6 mb-8">
+        <p id="product-price" class="font-display-sm text-on-surface"></p>
+      </div>
+
+      <!-- Quantity + Add to cart -->
+      <div id="buy-section" class="flex gap-4 flex-wrap items-center mb-6">
+        <div class="flex items-center border border-outline-variant rounded-lg overflow-hidden">
+          <button id="qty-minus" class="px-4 py-3 bg-surface-container hover:bg-surface-variant transition-colors text-on-surface font-bold text-lg">−</button>
+          <input id="qty-input" type="number" value="1" min="1" max="99" class="w-16 text-center border-none focus:ring-0 font-body-md text-on-surface bg-surface py-3"/>
+          <button id="qty-plus" class="px-4 py-3 bg-surface-container hover:bg-surface-variant transition-colors text-on-surface font-bold text-lg">+</button>
+        </div>
+        <button id="add-to-cart-btn" class="flex-1 py-4 px-8 bg-primary-container text-white font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">add_shopping_cart</span>
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <!-- Info pills -->
+      <div class="flex flex-wrap gap-3">
+        <span class="flex items-center gap-1 text-xs text-secondary border border-outline-variant rounded-full px-3 py-1">
+          <span class="material-symbols-outlined text-sm">local_shipping</span> Envío a todo el Perú
+        </span>
+        <span class="flex items-center gap-1 text-xs text-secondary border border-outline-variant rounded-full px-3 py-1">
+          <span class="material-symbols-outlined text-sm">verified</span> Certificado ISO 9001
+        </span>
+        <span class="flex items-center gap-1 text-xs text-secondary border border-outline-variant rounded-full px-3 py-1">
+          <span class="material-symbols-outlined text-sm">replay</span> Devoluciones en 30 días
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs: Descripción / Especificaciones -->
+  <div class="mb-16">
+    <div class="flex border-b border-outline-variant mb-6">
+      <button class="tab-btn active px-6 py-3 font-medium border-b-2 border-primary-container text-primary-container transition-colors" data-tab="desc">Descripción</button>
+      <button class="tab-btn px-6 py-3 font-medium border-b-2 border-transparent text-secondary hover:text-on-surface transition-colors" data-tab="specs">Especificaciones Técnicas</button>
+      <button class="tab-btn px-6 py-3 font-medium border-b-2 border-transparent text-secondary hover:text-on-surface transition-colors" data-tab="ship">Envío e Info</button>
+    </div>
+    <div id="tab-desc" class="tab-content prose max-w-none text-secondary leading-relaxed"></div>
+    <div id="tab-specs" class="tab-content hidden">
+      <div id="spec-table" class="overflow-x-auto rounded-xl border border-outline-variant"></div>
+    </div>
+    <div id="tab-ship" class="tab-content hidden text-secondary leading-relaxed">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-surface-container rounded-xl p-6 border border-outline-variant">
+          <span class="material-symbols-outlined text-3xl text-primary-container mb-3 block">local_shipping</span>
+          <h3 class="font-headline-md mb-2">Envío Estándar</h3>
+          <p class="text-sm">3–5 días hábiles a todo el Perú. Despacho desde Lima, San Isidro.</p>
+        </div>
+        <div class="bg-surface-container rounded-xl p-6 border border-outline-variant">
+          <span class="material-symbols-outlined text-3xl text-primary-container mb-3 block">bolt</span>
+          <h3 class="font-headline-md mb-2">Envío Express</h3>
+          <p class="text-sm">1–2 días hábiles con entrega garantizada para Lima Metropolitana.</p>
+        </div>
+        <div class="bg-surface-container rounded-xl p-6 border border-outline-variant">
+          <span class="material-symbols-outlined text-3xl text-primary-container mb-3 block">replay</span>
+          <h3 class="font-headline-md mb-2">Política de Devolución</h3>
+          <p class="text-sm">Devoluciones dentro de los 30 días si el producto está sin abrir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recommended Products -->
+  <div class="mb-8">
+    <h2 class="font-headline-lg text-on-surface mb-6">Productos Recomendados</h2>
+    <div id="recommended-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-secondary dark:bg-inverse-surface py-stack-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-6 col-span-2 md:col-span-1">
+<a class="font-headline-md text-headline-md font-black text-white flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>Pintofil</a>
+<p class="text-white opacity-60 font-body-md leading-relaxed">© 2024 Pintofil Advanced Materials.<br/>Certificación ISO para confiabilidad industrial.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-headline-md border-b border-white/10 pb-2">Guías de Materiales</h4>
+<div class="flex flex-col gap-3">
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="ajustes-pla.html">Ajustes de PLA</a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="datos-petg.html">Datos Químicos PETG</a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="seguridad-resina.html">Fichas de Seguridad</a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity font-label-tech text-label-tech uppercase tracking-wide" href="guia-almacenamiento.html">Guía de Almacenamiento</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-headline-md border-b border-white/10 pb-2">Soporte Técnico</h4>
+<div class="flex flex-col gap-3">
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="politica-envio.html">Política de Envío</a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="politica-privacidad.html">Política de Privacidad</a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="politica-reembolso.html">Política de Reembolso</a>
+<a class="text-white opacity-60 hover:opacity-100 transition-opacity" href="venta-mayor.html">Venta al por Mayor</a>
+</div>
+</div>
+<div class="flex flex-col gap-4 col-span-2 md:col-span-1">
+<h4 class="text-white font-headline-md border-b border-white/10 pb-2">Recursos</h4>
+<div class="flex flex-col gap-4">
+<div class="p-4 bg-white/5 rounded border border-white/10">
+<span class="text-white opacity-60 text-xs block mb-1">Soporte Técnico</span>
+<a href="tel:+51014219999" class="text-white font-bold hover:text-primary-container transition-colors">+51 (01) 421 9999</a>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 mt-16 pt-8">
+<div class="px-margin-desktop max-w-container-max mx-auto flex justify-between items-center text-white opacity-40 text-sm flex-col md:flex-row gap-4">
+<span>Polímeros Certificados de Alto Rendimiento</span>
+<div class="flex gap-6">
+<a class="hover:underline" href="terminos-servicio.html">Términos de Servicio</a>
+<a class="hover:underline" href="cumplimiento-seguridad.html">Cumplimiento de Seguridad</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// ============================
+// PRODUCTS DATA (shared)
+// ============================
+const PRODUCTS = [
+  { id:1, name:"Creality PLA Pro Negro 1kg", tag:"PLA Pro", material:"PLA", color:"Negro", diameter:"1.75", weight:"1kg", detail:"±0.02mm", price:65, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuD6LEQhkWmepaCJOr5OYDfEgW6FiKjCra-dUK4LaK86PDbBWP1Zl98pvwWz4OYDOrrd-eo7FCPyrehYnsEBHOsGun2NOBRHZy6drglK8Qjl31FOQ4y7-ZH6pnpdWMhpsAe0mTKHXGIFBWk_la7wE99Lb1nlZkjWInyCSzTDoF4qInaY9zxEv3KHRVpK8M3JA-anxY-sQKf6vGxFfZQgFgKRlvLNO4UVU7E8k25nrXL2muuPMzSXXWthHsq67cGgTqRk76YjA1D8hPC5", tagBg:"bg-primary-container", desc:"El filamento PLA Pro de Creality está diseñado para ofrecer resultados excepcionales en impresoras FDM. Su formulación avanzada garantiza alta precisión dimensional (±0.02mm) y una excelente adhesión entre capas. Ideal para prototipos funcionales, modelos artísticos y piezas técnicas. Compatible con la mayoría de impresoras del mercado.", specials:{ "Temperatura de impresión": "190–220°C", "Temperatura de cama": "60°C (opcional)", "Densidad": "1.24 g/cm³", "Resistencia a la tracción": "65 MPa", "Módulo de flexión": "4000 MPa", "Humedad recomendada": "< 45%" } },
+  { id:2, name:"eSUN PETG Blanco 1kg", tag:"PETG", material:"PETG", color:"Blanco", diameter:"1.75", weight:"1kg", detail:"Industrial", price:75, stock:"stock-limitado", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuBEpT4PwQQK7UnxV4oLp95Z43zuSm5niGSHtTOFNqN_jtVgl1MmWKg_-G0O8bzD2K8hOji0vajd4_xM3_7kCHHlnl5d63u--pXtP3I9pK-8s6i-P4qDkEbZr2r1A4r8DXvWjXHPpbjhdFabbp2uTZiiC2UV6wx5C41NfH5fRz8e3ODxyWezYQoamXVj1rCc4Za7vZZoTLImANZORwR14AaODMtoD6zigrmM0xrPkV0KnI5-_4gMJykQZ74sPkVyTXsieBwCHJKcFA6R", tagBg:"bg-tertiary-container", desc:"El PETG de eSUN combina la facilidad de impresión del PLA con la resistencia del ABS. Excelente resistencia química, ideal para recipientes y piezas en contacto con agua. Su transparencia cristalina permite ver el interior de las piezas. Baja contracción, alta resistencia a impactos.", specials:{ "Temperatura de impresión": "230–250°C", "Temperatura de cama": "70–80°C", "Densidad": "1.27 g/cm³", "Resistencia UV": "Alta", "Resistencia química": "Excelente", "Absorción de agua": "Baja" } },
+  { id:3, name:"Polymaker PolyFlex TPU Azul 0.5kg", tag:"TPU Flexible", material:"TPU", color:"Azul", diameter:"1.75", weight:"0.5kg", detail:"Dureza 95A", price:120, stock:"proximo", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuBTUW3CdTJJ53uUauGeBIexr4h8TVZMokbiAxaMG3FIIvOhm_f3CK56ciGbQefoSSbhmLMzvUZE_jyFviNTrNrmWJ7ccb49n2sFFFjDJpIYSQiM0O71Cm4vHOhbhNFTA0XYeBy-R08yMzjGXvjKNSpwNfbGGOx1o5WxbRQnjBQj-ShUgoPoZr1igyuTeCEiJjSNKI8KjBP6LFM2zg8qCXCr7KLkaQ_jyquw-3yBVb7JRqadeG0b76bbescRjsAVQavwbPvdS2JLxDZU", tagBg:"bg-on-surface", desc:"PolyFlex TPU es el filamento flexible de referencia de Polymaker. Con una dureza Shore 95A, permite imprimir partes elásticas y resistentes al desgarro. Ideal para carcasas, suelas, juntas y protectores.", specials:{ "Temperatura de impresión": "210–230°C", "Temperatura de cama": "25–60°C", "Dureza Shore": "95A", "Elongación en rotura": "330%", "Densidad": "1.20 g/cm³", "Velocidad recomendada": "20–40 mm/s" } },
+  { id:4, name:"Pintofil Silk Cobre PLA 1kg", tag:"PLA Cobre", material:"PLA", color:"Cobre", diameter:"1.75", weight:"1kg", detail:"Alto Detalle", price:89, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuAn8kzwsSVle58ZQUKlwuKdC_tf0b2snGg-y6KP7euWIwPMeOo6d2e5ei2l74NMUI6MbzDrsx0NarpP_BxYf_eRtSO7iblU4R_lJqvLHedOKGINn1MC4oqkquUBKiN0lHKyt3CAZlubKm1rtRNcUgt6dPicf-IeD7FSMWHByFCrKd6Itc_o_QflgpcUVWaXfc6NT_VV1eXS-M_kvWby6DMnhRyp6a9hzHcSIYqZYrqOINFzNOKWqNYIzQGBGyOOCH51I-tTuzrWb9nb", tagBg:"bg-primary-container", desc:"Filamento PLA Silk de Pintofil con acabado metálico en tono cobre. Perfecto para figuras decorativas, joyería, réplicas arquitectónicas y arte. El brillo sedoso ofrece una apariencia premium sin post-procesado.", specials:{ "Temperatura de impresión": "195–215°C", "Temperatura de cama": "60°C", "Acabado": "Sedoso metálico", "Precisión dimensional": "±0.03mm", "Densidad": "1.24 g/cm³", "Recomendado": "Velocidad media-alta" } },
+  { id:5, name:"Pintofil PETG Carbono 1kg", tag:"PETG-CF", material:"PETG", color:"Negro", diameter:"1.75", weight:"1kg", detail:"Estructural", price:115, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuDSA04_60M_TK0mGsFX402D4JeEHNqkdQol2V60rnQ82ZiLDBYt52aE3mNa8JkrQjoYbue2wqrJeLq3afaRfGeCJ3Wg4F68q9_6zXVjw6hNVn2MlHEtn40JHjhPcHoWwWSee2arMfPXslmjlnYWOaTY0D0B8Y34PzFtwSlRL2xii9BwPVmwcVNdWzkTwUJX51cba6O4PMPOQm1C4BDRaQuXU4QWkqsr557wgwPalSyDbsZHl7jUgmeR_dzjj8ajL2ntupUBo0F4bwjo", tagBg:"bg-on-surface", desc:"PETG reforzado con fibra de carbono de Pintofil. Para ingeniería seria: alta rigidez, excelente resistencia térmica y aspecto técnico inigualable. Requiere nozzle endurecido.", specials:{ "Temperatura de impresión": "240–260°C", "Temperatura de cama": "80–90°C", "Relleno de fibra de carbono": "20%", "Rigidez específica": "Alta", "Densidad": "1.30 g/cm³", "Nozzle recomendado": "Acero endurecido" } },
+  { id:6, name:"PLA Estándar Verde Esmeralda 1kg", tag:"PLA Estándar", material:"PLA", color:"Verde", diameter:"1.75", weight:"1kg", detail:"Uso General", price:58, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuDfR-x1Z0KqYEiWtR1m6ullnNNF79xuflo8MwemF_1nNbWCGT_ISwu7Q9Yto1YUDQ8nqLowwDYZVAM33LCKqkc3ioz_fRWqJTj-6gDODLgkTUU80iNUTs-t-e0Xw-2G9h4Vcyg3PghKa-NGxBoW_YHbe_Mvj4eZ8pUvCF5oluyCxE0Bp5W67yY4D7ycOfa7nVR5L6AZ5DtdHKTDMgU9PGY23a4av-x82P3rylALx-BzBvg0L-utCYsYCz4fazS9RBRWlHFrCgCiAI-o", tagBg:"bg-tertiary", desc:"PLA estándar en color verde esmeralda vibrante. La opción más económica sin sacrificar calidad. Óptimo para principiantes y proyectos escolares o de prototipado rápido.", specials:{ "Temperatura de impresión": "185–210°C", "Temperatura de cama": "Sin necesidad (50°C recomendado)", "Densidad": "1.24 g/cm³", "Precisión dimensional": "±0.05mm", "Biodegradable": "Sí (base PLA)", "Velocidad": "Hasta 100 mm/s" } },
+  { id:7, name:"Pintofil ABS Negro 1kg", tag:"ABS", material:"ABS", color:"Negro", diameter:"1.75", weight:"1kg", detail:"Alta Resistencia", price:72, stock:"en-stock", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuD6LEQhkWmepaCJOr5OYDfEgW6FiKjCra-dUK4LaK86PDbBWP1Zl98pvwWz4OYDOrrd-eo7FCPyrehYnsEBHOsGun2NOBRHZy6drglK8Qjl31FOQ4y7-ZH6pnpdWMhpsAe0mTKHXGIFBWk_la7wE99Lb1nlZkjWInyCSzTDoF4qInaY9zxEv3KHRVpK8M3JA-anxY-sQKf6vGxFfZQgFgKRlvLNO4UVU7E8k25nrXL2muuPMzSXXWthHsq67cGgTqRk76YjA1D8hPC5", tagBg:"bg-on-surface", desc:"ABS de Pintofil para piezas funcionales de alto impacto. Material clásico de la industria automotriz y electrónica. Soporta temperaturas de hasta 105°C. Postprocesable con acetona para acabados perfectos.", specials:{ "Temperatura de impresión": "220–250°C", "Temperatura de cama": "100–110°C", "Temperatura de servicio": "hasta 105°C", "Densidad": "1.04 g/cm³", "Resistencia al impacto": "Muy alta", "Postproceso": "Vapor de acetona" } },
+  { id:8, name:"PLA Pro Rojo 1kg", tag:"PLA Pro", material:"PLA", color:"Rojo", diameter:"2.85", weight:"1kg", detail:"±0.02mm", price:68, stock:"stock-limitado", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuD6LEQhkWmepaCJOr5OYDfEgW6FiKjCra-dUK4LaK86PDbBWP1Zl98pvwWz4OYDOrrd-eo7FCPyrehYnsEBHOsGun2NOBRHZy6drglK8Qjl31FOQ4y7-ZH6pnpdWMhpsAe0mTKHXGIFBWk_la7wE99Lb1nlZkjWInyCSzTDoF4qInaY9zxEv3KHRVpK8M3JA-anxY-sQKf6vGxFfZQgFgKRlvLNO4UVU7E8k25nrXL2muuPMzSXXWthHsq67cGgTqRk76YjA1D8hPC5", tagBg:"bg-primary-container", desc:"PLA Pro en rojo intenso para filamento de 2.85mm. Compatible con impresoras Ultimaker, BCN3D y similares. Alta precisión dimensional y brillante acabado superficial.", specials:{ "Temperatura de impresión": "190–220°C", "Temperatura de cama": "60°C", "Diámetro": "2.85mm ±0.02mm", "Densidad": "1.24 g/cm³", "Opacidad": "Alta", "Resistencia a tracción": "65 MPa" } },
+  { id:9, name:"PETG Morado 1kg", tag:"PETG", material:"PETG", color:"Morado", diameter:"1.75", weight:"1kg", detail:"Resistente UV", price:82, stock:"proximo", img:"https://lh3.googleusercontent.com/aida-public/AB6AXuBEpT4PwQQK7UnxV4oLp95Z43zuSm5niGSHtTOFNqN_jtVgl1MmWKg_-G0O8bzD2K8hOji0vajd4_xM3_7kCHHlnl5d63u--pXtP3I9pK-8s6i-P4qDkEbZr2r1A4r8DXvWjXHPpbjhdFabbp2uTZiiC2UV6wx5C41NfH5fRz8e3ODxyWezYQoamXVj1rCc4Za7vZZoTLImANZORwR14AaODMtoD6zigrmM0xrPkV0KnI5-_4gMJykQZ74sPkVyTXsieBwCHJKcFA6R", tagBg:"bg-tertiary-container", desc:"PETG en color morado con alta resistencia UV, ideal para piezas de exteriores. Próximamente disponible. Déjanos tu email para notificación.", specials:{ "Temperatura de impresión": "230–250°C", "Temperatura de cama": "70–80°C", "Resistencia UV": "Muy alta", "Estabilizador UV": "Sí", "Densidad": "1.27 g/cm³", "Disponibilidad": "Próximamente" } },
+];
+
+const stockInfo = {
+  'en-stock':       { label: 'En Stock',        cls: 'text-green-600' },
+  'stock-limitado': { label: 'Stock Limitado',   cls: 'text-orange-500' },
+  'proximo':        { label: 'Próximamente',      cls: 'text-secondary' },
+  'agotado':        { label: 'Agotado',           cls: 'text-secondary' },
+};
+
+// ============================
+// CART
+// ============================
+let cart = JSON.parse(localStorage.getItem('pintofil-cart') || '[]');
+function saveCart() { localStorage.setItem('pintofil-cart', JSON.stringify(cart)); }
+function addToCart(productId, qty) {
+  const p = PRODUCTS.find(x => x.id === productId);
+  if (!p) return;
+  const existing = cart.find(x => x.id === productId);
+  if (existing) { existing.qty += qty; }
+  else { cart.push({ id: p.id, name: p.name, price: p.price, qty, img: p.img }); }
+  saveCart(); updateCartUI(); openCart();
+}
+function removeFromCart(id) { cart = cart.filter(x => x.id !== id); saveCart(); updateCartUI(); }
+function clearCart() { cart = []; saveCart(); updateCartUI(); }
+function updateCartUI() {
+  const total = cart.reduce((s,x) => s + x.price*x.qty, 0);
+  const count = cart.reduce((s,x) => s + x.qty, 0);
+  document.getElementById('cart-total').textContent = `S/ ${total.toFixed(2)}`;
+  const countEl = document.getElementById('cart-count');
+  if (count > 0) { countEl.textContent = count; countEl.classList.remove('hidden'); }
+  else countEl.classList.add('hidden');
+  const itemsEl = document.getElementById('cart-items');
+  document.getElementById('cart-empty').classList.toggle('hidden', cart.length > 0);
+  itemsEl.querySelectorAll('.cart-item').forEach(el => el.remove());
+  cart.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'cart-item flex gap-3 items-start border-b border-outline-variant pb-4';
+    div.innerHTML = `<img src="${item.img}" class="w-16 h-16 object-contain rounded border border-outline-variant bg-white shrink-0" alt="${item.name}"/>
+      <div class="flex-1 min-w-0">
+        <p class="font-body-md font-semibold text-on-surface leading-tight mb-1 truncate">${item.name}</p>
+        <p class="text-secondary text-sm">Cant: ${item.qty}</p>
+        <p class="font-bold text-primary-container">S/ ${(item.price*item.qty).toFixed(2)}</p>
+      </div>
+      <button class="text-secondary hover:text-red-500 transition-colors shrink-0" onclick="removeFromCart(${item.id})">
+        <span class="material-symbols-outlined text-lg">delete</span></button>`;
+    itemsEl.appendChild(div);
+  });
+}
+function openCart() {
+  document.getElementById('cart-panel').classList.remove('translate-x-full');
+  document.getElementById('cart-overlay').classList.remove('hidden');
+  setTimeout(() => document.getElementById('cart-overlay').classList.remove('opacity-0'), 10);
+}
+function closeCart() {
+  document.getElementById('cart-overlay').classList.add('opacity-0');
+  document.getElementById('cart-panel').classList.add('translate-x-full');
+  setTimeout(() => document.getElementById('cart-overlay').classList.add('hidden'), 350);
+}
+
+// ============================
+// LOAD PRODUCT
+// ============================
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id')) || 1;
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) { document.body.innerHTML = '<div class="flex items-center justify-center h-screen"><p class="text-secondary text-lg">Producto no encontrado. <a href="catalogo.html" class="text-primary hover:underline">Volver al catálogo</a></p></div>'; return; }
+
+  // Page title / breadcrumb
+  document.getElementById('page-title').textContent = `${p.name} | Pintofil`;
+  document.getElementById('breadcrumb-name').textContent = p.name;
+
+  // Product image & tag
+  document.getElementById('product-img').src = p.img;
+  document.getElementById('product-img').alt = p.name;
+  const tagEl = document.getElementById('product-tag');
+  tagEl.textContent = p.tag;
+  tagEl.className = `absolute top-4 left-4 ${p.tagBg} text-white text-[10px] font-black px-3 py-1 uppercase tracking-tighter rounded-lg`;
+
+  // Name, price, specs
+  document.getElementById('product-name').textContent = p.name;
+  document.getElementById('product-specs').textContent = `${p.diameter}mm | ${p.weight} | ${p.detail}`;
+  document.getElementById('product-price').textContent = `S/ ${p.price.toFixed(2)}`;
+  const badge = stockInfo[p.stock] || stockInfo['agotado'];
+  const stockEl = document.getElementById('stock-badge');
+  stockEl.textContent = badge.label;
+  stockEl.className = `font-label-tech text-xs font-bold uppercase mb-3 ${badge.cls}`;
+
+  // Specs mini-grid
+  const specGrid = document.getElementById('specs-grid');
+  const specEntries = [
+    { icon: 'fiber_manual_record', label: 'Material', val: p.material },
+    { icon: 'palette', label: 'Color', val: p.color },
+    { icon: 'settings_overscan', label: 'Diámetro', val: p.diameter + 'mm' },
+    { icon: 'scale', label: 'Peso', val: p.weight },
+  ];
+  specGrid.innerHTML = specEntries.map(e => `
+    <div class="flex items-center gap-3 bg-surface-container rounded-xl px-4 py-3 border border-outline-variant">
+      <span class="material-symbols-outlined text-primary-container text-xl">${e.icon}</span>
+      <div><p class="text-xs text-secondary">${e.label}</p><p class="font-medium text-on-surface">${e.val}</p></div>
+    </div>`).join('');
+
+  // Buy section
+  const available = p.stock === 'en-stock' || p.stock === 'stock-limitado';
+  if (!available) {
+    document.getElementById('buy-section').innerHTML = `<p class="text-secondary italic">${p.stock === 'proximo' ? 'Déjanos tu correo y te avisamos cuando esté disponible.' : 'Este producto está temporalmente agotado.'}</p>`;
+  }
+
+  // Tabs description
+  document.getElementById('tab-desc').innerHTML = `<p class="mb-4">${p.desc}</p>`;
+
+  // Specs table
+  document.getElementById('spec-table').innerHTML = `<table class="min-w-full text-sm">
+    <tbody>${Object.entries(p.specials || {}).map(([ k,v], i) => `
+      <tr class="${i%2===0?'bg-surface-container/40':''}">
+        <td class="px-6 py-3 font-medium text-secondary w-1/2">${k}</td>
+        <td class="px-6 py-3 font-medium text-on-surface">${v}</td>
+      </tr>`).join('')}
+    </tbody></table>`;
+
+  // Prev / Next navigation
+  const idx = PRODUCTS.findIndex(x => x.id === id);
+  const prevEl = document.getElementById('btn-prev');
+  const nextEl = document.getElementById('btn-next');
+  if (idx > 0) prevEl.href = `producto.html?id=${PRODUCTS[idx-1].id}`;
+  else prevEl.classList.add('opacity-30', 'pointer-events-none');
+  if (idx < PRODUCTS.length - 1) nextEl.href = `producto.html?id=${PRODUCTS[idx+1].id}`;
+  else nextEl.classList.add('opacity-30', 'pointer-events-none');
+
+  // Recommended: same material, excluding current, max 4
+  const recs = PRODUCTS.filter(x => x.id !== id && x.material === p.material).slice(0,4);
+  const fallback = PRODUCTS.filter(x => x.id !== id).slice(0,4);
+  const recList = recs.length >= 2 ? recs : fallback;
+  const recGrid = document.getElementById('recommended-grid');
+  recGrid.innerHTML = recList.map(r => {
+    const rb = stockInfo[r.stock] || stockInfo['agotado'];
+    const avail = r.stock === 'en-stock' || r.stock === 'stock-limitado';
+    return `<a href="producto.html?id=${r.id}" class="rec-card bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group flex flex-col">
+      <div class="aspect-square bg-white flex items-center justify-center p-4 relative overflow-hidden">
+        <img src="${r.img}" class="w-24 h-24 object-contain group-hover:scale-105 transition-transform duration-300" alt="${r.name}"/>
+        <span class="absolute top-2 left-2 ${r.tagBg} text-white text-[9px] font-black px-2 py-0.5 uppercase tracking-tighter rounded">${r.tag}</span>
+      </div>
+      <div class="p-3 flex flex-col flex-1">
+        <p class="font-medium text-sm text-on-surface leading-tight mb-1 group-hover:text-primary transition-colors line-clamp-2">${r.name}</p>
+        <p class="${rb.cls} text-[10px] font-bold uppercase mb-1">${rb.label}</p>
+        <p class="font-bold text-on-surface mt-auto">S/ ${r.price.toFixed(2)}</p>
+      </div>
+    </a>`;
+  }).join('');
+
+  // Quantity controls
+  const qtyInput = document.getElementById('qty-input');
+  document.getElementById('qty-minus').addEventListener('click', () => { if (parseInt(qtyInput.value) > 1) qtyInput.value = parseInt(qtyInput.value) - 1; });
+  document.getElementById('qty-plus').addEventListener('click', () => { if (parseInt(qtyInput.value) < 99) qtyInput.value = parseInt(qtyInput.value) + 1; });
+
+  // Add to cart
+  const addBtn = document.getElementById('add-to-cart-btn');
+  if (addBtn) {
+    addBtn.addEventListener('click', () => {
+      const qty = parseInt(qtyInput.value) || 1;
+      addToCart(p.id, qty);
+      addBtn.innerHTML = '<span class="material-symbols-outlined">check</span> ¡Agregado!';
+      addBtn.classList.add('bg-green-600');
+      addBtn.classList.remove('bg-primary-container');
+      setTimeout(() => {
+        addBtn.innerHTML = '<span class="material-symbols-outlined">add_shopping_cart</span> Agregar al Carrito';
+        addBtn.classList.remove('bg-green-600');
+        addBtn.classList.add('bg-primary-container');
+      }, 1500);
+    });
+  }
+
+  // Cart open/close
+  document.getElementById('cart-btn').addEventListener('click', openCart);
+  document.getElementById('cart-close').addEventListener('click', closeCart);
+  document.getElementById('cart-overlay').addEventListener('click', closeCart);
+  document.getElementById('cart-clear').addEventListener('click', clearCart);
+
+  // Mobile menu
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let isMenuOpen = false;
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      mobileMenu.classList.toggle('translate-x-full', !isMenuOpen);
+      mobileMenuBtn.innerHTML = isMenuOpen
+        ? '<span class="material-symbols-outlined text-2xl">close</span>'
+        : '<span class="material-symbols-outlined text-2xl">menu</span>';
+    });
+  }
+
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active','border-primary-container','text-primary-container'); b.classList.add('border-transparent','text-secondary'); });
+      btn.classList.add('active','border-primary-container','text-primary-container');
+      btn.classList.remove('border-transparent','text-secondary');
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+      document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
+    });
+  });
+
+  // Scroll header
+  window.addEventListener('scroll', () => {
+    const h = document.querySelector('header');
+    if (window.scrollY > 20) { h.classList.add('shadow-md','h-16'); h.classList.remove('h-20'); }
+    else { h.classList.remove('shadow-md','h-16'); h.classList.add('h-20'); }
+  });
+
+  updateCartUI();
+});
+</script>
+</body>
+</html>
